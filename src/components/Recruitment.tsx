@@ -11,6 +11,7 @@ const Recruitment = () => {
       skills: ["Flutter", "Dart", "Firebase", "REST APIs", "Mobile UI/UX"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Django Backend Engineer",
@@ -18,6 +19,7 @@ const Recruitment = () => {
       skills: ["Django", "Python", "PostgreSQL", "Redis", "Docker"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "LLM/AI Specialist",
@@ -25,6 +27,7 @@ const Recruitment = () => {
       skills: ["Python", "LLM Integration", "Machine Learning", "NLP", "TensorFlow"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Cybersecurity Analyst",
@@ -32,6 +35,7 @@ const Recruitment = () => {
       skills: ["Network Security", "Penetration Testing", "SIEM", "Compliance", "Threat Analysis"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Blockchain Smart Contract Developer",
@@ -39,6 +43,7 @@ const Recruitment = () => {
       skills: ["Solidity", "Web3.js", "Ethereum", "DeFi", "Smart Contract Auditing"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Digital Marketing Strategist",
@@ -46,6 +51,7 @@ const Recruitment = () => {
       skills: ["SEO/SEM", "Analytics", "Campaign Management", "Content Strategy", "A/B Testing"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Call Center Team Lead",
@@ -53,12 +59,81 @@ const Recruitment = () => {
       skills: ["Team Management", "CRM Systems", "Quality Assurance", "Training", "Multilingual"],
       type: "Full-time",
       location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Designer UI/UX",
+      description: "Participer à la conception d'interfaces utilisateur modernes. Collaborer avec l'équipe produit pour créer des expériences utilisateur optimales.",
+      skills: ["Figma", "Adobe XD", "Prototypage", "Design Thinking", "User Research"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Développeur Flutter",
+      description: "Développer des applications mobiles cross-platform sous supervision. Apprendre les meilleures pratiques de développement mobile.",
+      skills: ["Flutter", "Dart", "Mobile Development", "Git", "API Integration"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Développeur Odoo",
+      description: "Participer au développement et personnalisation de modules Odoo. Découvrir l'écosystème ERP et les solutions d'entreprise.",
+      skills: ["Python", "Odoo", "PostgreSQL", "XML", "JavaScript"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Assistant RH",
+      description: "Assister l'équipe RH dans le recrutement et la gestion administrative. Participer aux processus d'onboarding et de formation.",
+      skills: ["Communication", "Organisation", "MS Office", "Recrutement", "Gestion administrative"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Assistant Administratif Direction",
+      description: "Soutenir la direction dans les tâches administratives quotidiennes. Gérer les communications et la documentation interne.",
+      skills: ["Organisation", "Communication", "MS Office", "Gestion documentaire", "Discrétion"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Mobile Growth Analyst / Data Analyst",
+      description: "Analyser les données de croissance mobile et les métriques utilisateur. Créer des rapports et identifier des opportunités d'amélioration.",
+      skills: ["Google Analytics", "Excel", "Data Visualization", "SQL", "Mobile Analytics"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Campaign Manager",
+      description: "Assister dans la création et gestion de campagnes marketing digitales. Suivre les performances et optimiser les résultats.",
+      skills: ["Marketing Digital", "Google Ads", "Social Media", "Analytics", "Copywriting"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Stagiaire Rédacteur Web",
+      description: "Créer du contenu optimisé SEO pour le web. Rédiger des articles, pages produits et contenus marketing engageants.",
+      skills: ["Rédaction", "SEO", "WordPress", "Content Marketing", "Storytelling"],
+      type: "Stage (3 mois)",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
     },
   ];
 
-  const handleApply = (position: string) => {
-    // External link to Odoo portal
-    window.open("https://odoo.com/apply", "_blank", "noopener,noreferrer");
+  const handleApply = (formUrl: string) => {
+    if (formUrl) {
+      window.open(formUrl, "_blank", "noopener,noreferrer");
+    } else {
+      // Fallback si le lien n'est pas configuré
+      alert("Le formulaire de candidature pour ce poste sera bientôt disponible. Contactez-nous à agh.dataagencyholdingsa@gmail.com");
+    }
   };
 
   return (
@@ -109,10 +184,10 @@ const Recruitment = () => {
                       📍 {position.location}
                     </span>
                     <Button
-                      onClick={() => handleApply(position.title)}
+                      onClick={() => handleApply(position.formUrl)}
                       className="rounded-full group"
                     >
-                      Apply Now
+                      Postuler
                       <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Button>
                   </div>
