@@ -27,7 +27,7 @@ const Recruitment = () => {
       skills: ["Python", "Odoo", "PostgreSQL", "XML", "JavaScript"],
       type: "Stage (3 mois)",
       location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
+      formUrl: "https://forms.gle/h1dEAtJQhAFwn7518", // À remplir avec le lien Google Form
     },
     {
       title: "Stagiaire Assistant RH",
