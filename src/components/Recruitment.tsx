@@ -6,12 +6,68 @@ import { Badge } from "@/components/ui/badge";
 const Recruitment = () => {
   const positions = [
     {
+      title: "Senior Flutter Developer",
+      description: "Build next-generation mobile applications with Flutter. Lead development of cross-platform solutions integrating AI/ML capabilities.",
+      skills: ["Flutter", "Dart", "Firebase", "REST APIs", "Mobile UI/UX"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Django Backend Engineer",
+      description: "Design and implement scalable backend systems. Develop RESTful APIs and manage database architecture for enterprise applications.",
+      skills: ["Django", "Python", "PostgreSQL", "Redis", "Docker"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "LLM/AI Specialist",
+      description: "Integrate cutting-edge AI models into production systems. Develop intelligent features using LLMs and implement ML pipelines.",
+      skills: ["Python", "LLM Integration", "Machine Learning", "NLP", "TensorFlow"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Cybersecurity Analyst",
+      description: "Protect enterprise infrastructure and conduct security audits. Implement security protocols and respond to threats proactively.",
+      skills: ["Network Security", "Penetration Testing", "SIEM", "Compliance", "Threat Analysis"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Blockchain Smart Contract Developer",
+      description: "Build and audit smart contracts for DeFi applications. Develop secure blockchain solutions on Ethereum and other platforms.",
+      skills: ["Solidity", "Web3.js", "Ethereum", "DeFi", "Smart Contract Auditing"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Digital Marketing Strategist",
+      description: "Drive digital campaigns and optimize marketing ROI. Leverage analytics to develop data-driven growth strategies.",
+      skills: ["SEO/SEM", "Analytics", "Campaign Management", "Content Strategy", "A/B Testing"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
+      title: "Call Center Team Lead",
+      description: "Lead customer support operations and manage multilingual teams. Implement quality assurance and optimize service delivery.",
+      skills: ["Team Management", "CRM Systems", "Quality Assurance", "Training", "Multilingual"],
+      type: "Full-time",
+      location: "Remote",
+      formUrl: "", // À remplir avec le lien Google Form
+    },
+    {
       title: "Stagiaire Designer UI/UX",
       description: "Participer à la conception d'interfaces utilisateur modernes. Collaborer avec l'équipe produit pour créer des expériences utilisateur optimales.",
       skills: ["Figma", "Adobe XD", "Prototypage", "Design Thinking", "User Research"],
       type: "Stage (3 mois)",
       location: "Remote",
-      formUrl: "https://forms.gle/FSdfQukMnZdM6Zm78", // À remplir avec le lien Google Form
+      formUrl: "", // À remplir avec le lien Google Form
     },
     {
       title: "Stagiaire Développeur Flutter",
@@ -66,62 +122,6 @@ const Recruitment = () => {
       description: "Créer du contenu optimisé SEO pour le web. Rédiger des articles, pages produits et contenus marketing engageants.",
       skills: ["Rédaction", "SEO", "WordPress", "Content Marketing", "Storytelling"],
       type: "Stage (3 mois)",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-        {
-      title: "Senior Flutter Developer",
-      description: "Build next-generation mobile applications with Flutter. Lead development of cross-platform solutions integrating AI/ML capabilities.",
-      skills: ["Flutter", "Dart", "Firebase", "REST APIs", "Mobile UI/UX"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "Django Backend Engineer",
-      description: "Design and implement scalable backend systems. Develop RESTful APIs and manage database architecture for enterprise applications.",
-      skills: ["Django", "Python", "PostgreSQL", "Redis", "Docker"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "LLM/AI Specialist",
-      description: "Integrate cutting-edge AI models into production systems. Develop intelligent features using LLMs and implement ML pipelines.",
-      skills: ["Python", "LLM Integration", "Machine Learning", "NLP", "TensorFlow"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "Cybersecurity Analyst",
-      description: "Protect enterprise infrastructure and conduct security audits. Implement security protocols and respond to threats proactively.",
-      skills: ["Network Security", "Penetration Testing", "SIEM", "Compliance", "Threat Analysis"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "Blockchain Smart Contract Developer",
-      description: "Build and audit smart contracts for DeFi applications. Develop secure blockchain solutions on Ethereum and other platforms.",
-      skills: ["Solidity", "Web3.js", "Ethereum", "DeFi", "Smart Contract Auditing"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "Digital Marketing Strategist",
-      description: "Drive digital campaigns and optimize marketing ROI. Leverage analytics to develop data-driven growth strategies.",
-      skills: ["SEO/SEM", "Analytics", "Campaign Management", "Content Strategy", "A/B Testing"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
-    {
-      title: "Call Center Team Lead",
-      description: "Lead customer support operations and manage multilingual teams. Implement quality assurance and optimize service delivery.",
-      skills: ["Team Management", "CRM Systems", "Quality Assurance", "Training", "Multilingual"],
-      type: "Full-time",
       location: "Remote",
       formUrl: "", // À remplir avec le lien Google Form
     },
