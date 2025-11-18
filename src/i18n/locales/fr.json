@@ -1,0 +1,125 @@
+{
+  "navigation": {
+    "expertise": "Expertise",
+    "careers": "Carrières",
+    "culture": "Culture",
+    "contact": "Contact",
+    "joinUs": "Rejoignez-nous"
+  },
+  "hero": {
+    "badge": "Now Hiring: Remote-First Positions",
+    "title": "AGH DATA AGENCY",
+    "subtitle": "HOLDING SA",
+    "tagline": "Innovative Digital Solutions & Next-Gen Technology",
+    "services": {
+      "mobileApps": "Mobile Apps",
+      "cybersecurity": "Cybersecurity",
+      "blockchain": "Blockchain",
+      "digitalMarketing": "Digital Marketing",
+      "callCenter": "Call Center"
+    },
+    "cta": "Join Our Remote Team",
+    "stats": {
+      "employees": "Employés",
+      "remote": "Remote",
+      "policy": "Policy"
+    }
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "subtitle": "Comprehensive digital solutions powered by cutting-edge technology and industry best practices",
+    "services": {
+      "mobile": {
+        "title": "Mobile App Development",
+        "description": "Cutting-edge mobile solutions with Flutter, Django backend, and LLM integration for intelligent applications."
+      },
+      "security": {
+        "title": "Cybersecurity & Blockchain",
+        "description": "Enterprise-grade security solutions and blockchain implementation for decentralized applications."
+      },
+      "backend": {
+        "title": "Backend Architecture",
+        "description": "Scalable backend systems with Django, RESTful APIs, and cloud infrastructure management."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Data-driven marketing strategies, SEO optimization, and comprehensive campaign management."
+      },
+      "callcenter": {
+        "title": "Call Center Services",
+        "description": "Professional customer support solutions with multilingual capabilities and 24/7 availability."
+      }
+    }
+  },
+  "recruitment": {
+    "badge": "We're Hiring",
+    "title": "Join Our Remote-First Team",
+    "subtitle": "Work from anywhere • BYOD policy • Cutting-edge projects",
+    "internships": {
+      "title": "Stages de Pré-Embauche",
+      "subtitle": "Stage de 3 mois • Formation pratique • Opportunité d'embauche"
+    },
+    "fulltime": {
+      "title": "Postes à Temps Plein",
+      "subtitle": "Full-time • Remote • Competitive compensation"
+    },
+    "filter": {
+      "all": "Tous les postes",
+      "internship": "Stages",
+      "fulltime": "Temps plein",
+      "searchPlaceholder": "Rechercher un poste..."
+    },
+    "requiredSkills": "Required Skills:",
+    "apply": "Postuler",
+    "cta": {
+      "text": "Don't see the right position? We're always looking for talented individuals.",
+      "button": "Get in Touch"
+    }
+  },
+  "remoteCulture": {
+    "title": "Remote-First Culture",
+    "subtitle": "We believe in flexibility, autonomy, and work-life balance",
+    "features": {
+      "flexible": {
+        "title": "Flexible Hours",
+        "description": "Work when you're most productive. We trust our team to manage their time effectively."
+      },
+      "byod": {
+        "title": "BYOD Policy",
+        "description": "Use the tools you're comfortable with. We provide equipment allowances for your setup."
+      },
+      "global": {
+        "title": "Global Team",
+        "description": "Collaborate with talented professionals from around the world on innovative projects."
+      },
+      "growth": {
+        "title": "Continuous Learning",
+        "description": "Access to training resources, conferences, and professional development opportunities."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or want to discuss a project? We'd love to hear from you.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "cta": "Contact Us"
+  },
+  "footer": {
+    "company": "Company",
+    "about": "À propos",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "services": "Services",
+    "mobile": "Mobile Development",
+    "cybersecurity": "Cybersecurity",
+    "blockchain": "Blockchain",
+    "marketing": "Digital Marketing",
+    "callcenter": "Call Center",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 AGH Data Agency Holding SA. All rights reserved."
+  }
+}

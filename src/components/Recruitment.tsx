@@ -1,9 +1,17 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Search } from "lucide-react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Recruitment = () => {
+  const { t } = useTranslation();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterType, setFilterType] = useState<"all" | "internship" | "fulltime">("all");
+
   const positions = [
     {
       title: "Stagiaire Designer UI/UX",
@@ -136,8 +144,21 @@ const Recruitment = () => {
     }
   };
 
-  const internships = positions.filter(p => p.type === "Stage (3 mois)");
-  const fullTimeJobs = positions.filter(p => p.type === "Full-time");
+  // Filter positions based on search and type
+  const filteredPositions = positions.filter(position => {
+    const matchesSearch = position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         position.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         position.skills.some(skill => skill.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesType = filterType === "all" || 
+                       (filterType === "internship" && position.type === "Stage (3 mois)") ||
+                       (filterType === "fulltime" && position.type === "Full-time");
+    
+    return matchesSearch && matchesType;
+  });
+
+  const internships = filteredPositions.filter(p => p.type === "Stage (3 mois)");
+  const fullTimeJobs = filteredPositions.filter(p => p.type === "Full-time");
 
   const renderPositionCard = (position: typeof positions[0], index: number) => (
     <Card
@@ -174,7 +195,7 @@ const Recruitment = () => {
               onClick={() => handleApply(position.formUrl)}
               className="rounded-full group"
             >
-              Postuler
+              {t('recruitment.apply')}
               <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Button>
           </div>
@@ -188,50 +209,85 @@ const Recruitment = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Badge className="mb-4" variant="outline">
-            We're Hiring
+            {t('recruitment.badge')}
           </Badge>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Join Our Remote-First Team
+            {t('recruitment.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Work from anywhere • BYOD policy • Cutting-edge projects
+            {t('recruitment.subtitle')}
           </p>
         </div>
 
-        {/* Stages Section */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <div className="mb-8">
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
-              Stages de Pré-Embauche
-            </h3>
-            <p className="text-center text-muted-foreground">
-              Stage de 3 mois • Formation pratique • Opportunité d'embauche
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {internships.map((position, index) => renderPositionCard(position, index))}
+        {/* Filters */}
+        <div className="max-w-4xl mx-auto mb-12 space-y-4">
+          <Tabs value={filterType} onValueChange={(v) => setFilterType(v as typeof filterType)} className="w-full">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="all">{t('recruitment.filter.all')}</TabsTrigger>
+              <TabsTrigger value="internship">{t('recruitment.filter.internship')}</TabsTrigger>
+              <TabsTrigger value="fulltime">{t('recruitment.filter.fulltime')}</TabsTrigger>
+            </TabsList>
+          </Tabs>
+          
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="text"
+              placeholder={t('recruitment.filter.searchPlaceholder')}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10"
+            />
           </div>
         </div>
 
+        {/* Stages Section */}
+        {(filterType === "all" || filterType === "internship") && internships.length > 0 && (
+          <div className="max-w-6xl mx-auto mb-20">
+            <div className="mb-8">
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
+                {t('recruitment.internships.title')}
+              </h3>
+              <p className="text-center text-muted-foreground">
+                {t('recruitment.internships.subtitle')}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {internships.map((position, index) => renderPositionCard(position, index))}
+            </div>
+          </div>
+        )}
+
         {/* Full-time Positions Section */}
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8">
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
-              Postes à Temps Plein
-            </h3>
-            <p className="text-center text-muted-foreground">
-              Full-time • Remote • Competitive compensation
+        {(filterType === "all" || filterType === "fulltime") && fullTimeJobs.length > 0 && (
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-8">
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
+                {t('recruitment.fulltime.title')}
+              </h3>
+              <p className="text-center text-muted-foreground">
+                {t('recruitment.fulltime.subtitle')}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {fullTimeJobs.map((position, index) => renderPositionCard(position, index))}
+            </div>
+          </div>
+        )}
+
+        {/* No results message */}
+        {filteredPositions.length === 0 && (
+          <div className="max-w-2xl mx-auto text-center py-12">
+            <p className="text-muted-foreground text-lg">
+              Aucun poste ne correspond à votre recherche. Essayez d'autres mots-clés ou supprimez les filtres.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {fullTimeJobs.map((position, index) => renderPositionCard(position, index))}
-          </div>
-        </div>
+        )}
 
         {/* CTA */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
           <p className="text-muted-foreground mb-4">
-            Don't see the right position? We're always looking for talented individuals.
+            {t('recruitment.cta.text')}
           </p>
           <Button
             variant="outline"
@@ -241,7 +297,7 @@ const Recruitment = () => {
             }}
             className="rounded-full"
           >
-            Get in Touch
+            {t('recruitment.cta.button')}
           </Button>
         </div>
       </div>

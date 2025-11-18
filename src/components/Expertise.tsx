@@ -1,35 +1,40 @@
 import { Smartphone, Shield, Database, Megaphone, Headphones } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Expertise = () => {
+  const { t } = useTranslation();
+  const { ref, isVisible } = useScrollAnimation();
+
   const services = [
     {
       icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Cutting-edge mobile solutions with Flutter, Django backend, and LLM integration for intelligent applications.",
+      title: t('expertise.services.mobile.title'),
+      description: t('expertise.services.mobile.description'),
       technologies: ["Flutter", "Django", "LLM/AI"],
     },
     {
       icon: Shield,
-      title: "Cybersecurity & Blockchain",
-      description: "Enterprise-grade security solutions and blockchain implementation for decentralized applications.",
+      title: t('expertise.services.security.title'),
+      description: t('expertise.services.security.description'),
       technologies: ["Smart Contracts", "Security Audits", "DeFi"],
     },
     {
       icon: Database,
-      title: "Backend Architecture",
-      description: "Scalable backend systems with Django, RESTful APIs, and cloud infrastructure management.",
+      title: t('expertise.services.backend.title'),
+      description: t('expertise.services.backend.description'),
       technologies: ["Django", "REST APIs", "Cloud"],
     },
     {
       icon: Megaphone,
-      title: "Digital Marketing",
-      description: "Data-driven marketing strategies, SEO optimization, and comprehensive campaign management.",
+      title: t('expertise.services.marketing.title'),
+      description: t('expertise.services.marketing.description'),
       technologies: ["SEO", "Analytics", "Campaigns"],
     },
     {
       icon: Headphones,
-      title: "Call Center Services",
-      description: "Professional customer support solutions with multilingual capabilities and 24/7 availability.",
+      title: t('expertise.services.callcenter.title'),
+      description: t('expertise.services.callcenter.description'),
       technologies: ["Support", "CRM", "Multilingual"],
     },
   ];
@@ -37,12 +42,12 @@ const Expertise = () => {
   return (
     <section id="expertise" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div ref={ref} className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Our Expertise
+            {t('expertise.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comprehensive digital solutions powered by cutting-edge technology and industry best practices
+            {t('expertise.subtitle')}
           </p>
         </div>
 
@@ -52,8 +57,11 @@ const Expertise = () => {
             return (
               <div
                 key={service.title}
-                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ 
+                  animationDelay: `${index * 100}ms`,
+                  transitionDelay: `${index * 100}ms`
+                }}
               >
                 {/* Icon */}
                 <div className="mb-6 inline-flex p-4 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform">

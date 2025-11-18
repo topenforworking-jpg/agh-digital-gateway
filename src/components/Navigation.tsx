@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -29,10 +32,10 @@ const Navigation = () => {
   };
 
   const navLinks = [
-    { href: "#expertise", label: "Expertise" },
-    { href: "#careers", label: "Careers" },
-    { href: "#culture", label: "Culture" },
-    { href: "#contact", label: "Contact" },
+    { href: "#expertise", label: t('navigation.expertise') },
+    { href: "#careers", label: t('navigation.careers') },
+    { href: "#culture", label: t('navigation.culture') },
+    { href: "#contact", label: t('navigation.contact') },
   ];
 
   const scrollToSection = (href: string) => {
@@ -55,7 +58,7 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -65,6 +68,7 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -75,7 +79,7 @@ const Navigation = () => {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
             <Button onClick={() => scrollToSection("#careers")} className="rounded-full">
-              Join Us
+              {t('navigation.joinUs')}
             </Button>
           </div>
 
@@ -115,8 +119,11 @@ const Navigation = () => {
                   {link.label}
                 </button>
               ))}
+              <div className="pt-2">
+                <LanguageSwitcher />
+              </div>
               <Button onClick={() => scrollToSection("#careers")} className="w-full rounded-full">
-                Join Us
+                {t('navigation.joinUs')}
               </Button>
             </div>
           </div>
