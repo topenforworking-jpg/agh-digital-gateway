@@ -136,6 +136,53 @@ const Recruitment = () => {
     }
   };
 
+  const internships = positions.filter(p => p.type === "Stage (3 mois)");
+  const fullTimeJobs = positions.filter(p => p.type === "Full-time");
+
+  const renderPositionCard = (position: typeof positions[0], index: number) => (
+    <Card
+      key={position.title}
+      className="hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 animate-fade-in"
+      style={{ animationDelay: `${index * 50}ms` }}
+    >
+      <CardHeader>
+        <div className="flex items-start justify-between gap-4 mb-2">
+          <CardTitle className="text-xl font-heading">{position.title}</CardTitle>
+          <Badge variant="secondary" className="shrink-0">
+            {position.type}
+          </Badge>
+        </div>
+        <CardDescription className="text-base">{position.description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          <div>
+            <p className="text-sm font-medium mb-2 text-muted-foreground">Required Skills:</p>
+            <div className="flex flex-wrap gap-2">
+              {position.skills.map((skill) => (
+                <Badge key={skill} variant="outline" className="text-xs">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center justify-between pt-4 border-t border-border">
+            <span className="text-sm text-muted-foreground flex items-center gap-2">
+              📍 {position.location}
+            </span>
+            <Button
+              onClick={() => handleApply(position.formUrl)}
+              className="rounded-full group"
+            >
+              Postuler
+              <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
   return (
     <section id="careers" className="py-20 md:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,50 +198,34 @@ const Recruitment = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {positions.map((position, index) => (
-            <Card
-              key={position.title}
-              className="hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 animate-fade-in"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <CardTitle className="text-xl font-heading">{position.title}</CardTitle>
-                  <Badge variant="secondary" className="shrink-0">
-                    {position.type}
-                  </Badge>
-                </div>
-                <CardDescription className="text-base">{position.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm font-medium mb-2 text-muted-foreground">Required Skills:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {position.skills.map((skill) => (
-                        <Badge key={skill} variant="outline" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between pt-4 border-t border-border">
-                    <span className="text-sm text-muted-foreground flex items-center gap-2">
-                      📍 {position.location}
-                    </span>
-                    <Button
-                      onClick={() => handleApply(position.formUrl)}
-                      className="rounded-full group"
-                    >
-                      Postuler
-                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Stages Section */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="mb-8">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
+              Stages de Pré-Embauche
+            </h3>
+            <p className="text-center text-muted-foreground">
+              Stage de 3 mois • Formation pratique • Opportunité d'embauche
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {internships.map((position, index) => renderPositionCard(position, index))}
+          </div>
+        </div>
+
+        {/* Full-time Positions Section */}
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-2 text-center">
+              Postes à Temps Plein
+            </h3>
+            <p className="text-center text-muted-foreground">
+              Full-time • Remote • Competitive compensation
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {fullTimeJobs.map((position, index) => renderPositionCard(position, index))}
+          </div>
         </div>
 
         {/* CTA */}
