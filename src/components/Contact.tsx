@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,9 +13,19 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [marketeurId, setMarketeurId] = useState("direct");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Check for ?m= parameter in URL
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const mParam = urlParams.get("m");
+    if (mParam) {
+      setMarketeurId(mParam);
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Basic validation
@@ -30,15 +40,34 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+    const form = e.currentTarget;
+    const formDataToSend = new FormData(form);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as any).toString(),
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -92,7 +121,15 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form 
+              name="landing-pages-leads"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="landing-pages-leads" />
+              <input type="hidden" name="marketeur_id" value={marketeurId} />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Name <span className="text-destructive">*</span>
