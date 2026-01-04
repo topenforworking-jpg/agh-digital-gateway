@@ -90,8 +90,8 @@ const TermsAndConditions = () => {
             </h2>
             <p>
               For any questions regarding these terms, please contact us at:{" "}
-              <a href="mailto:contact@aghdata.com" className="text-primary hover:underline">
-                contact@aghdata.com
+              <a href="mailto:agh.dataagencyholdingsa@gmail.com" className="text-primary hover:underline">
+                agh.dataagencyholdingsa@gmail.com
               </a>
             </p>
           </section>
