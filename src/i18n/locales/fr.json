@@ -7,61 +7,61 @@
     "joinUs": "Rejoignez-nous"
   },
   "hero": {
-    "badge": "Now Hiring: Remote-First Positions",
+    "badge": "Recrutement : Postes 100% Remote",
     "title": "AGH DATA AGENCY",
     "subtitle": "HOLDING SA",
-    "tagline": "Innovative Digital Solutions & Next-Gen Technology",
+    "tagline": "Solutions Digitales Innovantes & Technologies de Pointe",
     "services": {
-      "mobileApps": "Mobile Apps",
-      "cybersecurity": "Cybersecurity",
+      "mobileApps": "Apps Mobiles",
+      "cybersecurity": "Cybersécurité",
       "blockchain": "Blockchain",
-      "digitalMarketing": "Digital Marketing",
-      "callCenter": "Call Center"
+      "digitalMarketing": "Marketing Digital",
+      "callCenter": "Centre d'Appels"
     },
-    "cta": "Join Our Remote Team",
+    "cta": "Rejoindre notre équipe",
     "stats": {
       "employees": "Employés",
       "remote": "Remote",
-      "policy": "Policy"
+      "policy": "Politique"
     }
   },
   "expertise": {
-    "title": "Our Expertise",
-    "subtitle": "Comprehensive digital solutions powered by cutting-edge technology and industry best practices",
+    "title": "Notre Expertise",
+    "subtitle": "Solutions digitales complètes propulsées par des technologies de pointe et les meilleures pratiques de l'industrie",
     "services": {
       "mobile": {
-        "title": "Mobile App Development",
-        "description": "Cutting-edge mobile solutions with Flutter, Django backend, and LLM integration for intelligent applications."
+        "title": "Développement Mobile",
+        "description": "Solutions mobiles de pointe avec Flutter, backend Django et intégration LLM pour des applications intelligentes."
       },
       "security": {
-        "title": "Cybersecurity & Blockchain",
-        "description": "Enterprise-grade security solutions and blockchain implementation for decentralized applications."
+        "title": "Cybersécurité & Blockchain",
+        "description": "Solutions de sécurité de niveau entreprise et implémentation blockchain pour applications décentralisées."
       },
       "backend": {
-        "title": "Backend Architecture",
-        "description": "Scalable backend systems with Django, RESTful APIs, and cloud infrastructure management."
+        "title": "Architecture Backend",
+        "description": "Systèmes backend évolutifs avec Django, APIs RESTful et gestion d'infrastructure cloud."
       },
       "marketing": {
-        "title": "Digital Marketing",
-        "description": "Data-driven marketing strategies, SEO optimization, and comprehensive campaign management."
+        "title": "Marketing Digital",
+        "description": "Stratégies marketing basées sur les données, optimisation SEO et gestion complète de campagnes."
       },
       "callcenter": {
-        "title": "Call Center Services",
-        "description": "Professional customer support solutions with multilingual capabilities and 24/7 availability."
+        "title": "Services Centre d'Appels",
+        "description": "Solutions de support client professionnel avec capacités multilingues et disponibilité 24/7."
       }
     }
   },
   "recruitment": {
-    "badge": "We're Hiring",
-    "title": "Join Our Remote-First Team",
-    "subtitle": "Work from anywhere • BYOD policy • Cutting-edge projects",
+    "badge": "Nous Recrutons",
+    "title": "Rejoignez Notre Équipe Remote-First",
+    "subtitle": "Travaillez de n'importe où • Politique BYOD • Projets innovants",
     "internships": {
       "title": "Stages de Pré-Embauche",
       "subtitle": "Stage de 3 mois • Formation pratique • Opportunité d'embauche"
     },
     "fulltime": {
       "title": "Postes à Temps Plein",
-      "subtitle": "Full-time • Remote • Competitive compensation"
+      "subtitle": "Temps plein • Remote • Rémunération compétitive"
     },
     "filter": {
       "all": "Tous les postes",
@@ -69,57 +69,167 @@
       "fulltime": "Temps plein",
       "searchPlaceholder": "Rechercher un poste..."
     },
-    "requiredSkills": "Required Skills:",
+    "requiredSkills": "Compétences requises :",
     "apply": "Postuler",
     "cta": {
-      "text": "Don't see the right position? We're always looking for talented individuals.",
-      "button": "Get in Touch"
+      "text": "Vous ne trouvez pas le poste idéal ? Nous recherchons toujours des talents.",
+      "button": "Contactez-nous"
     }
   },
   "remoteCulture": {
-    "title": "Remote-First Culture",
-    "subtitle": "We believe in flexibility, autonomy, and work-life balance",
+    "title": "Culture Remote-First",
+    "subtitle": "Nous croyons en la flexibilité, l'autonomie et l'équilibre vie pro/perso",
     "features": {
       "flexible": {
-        "title": "Flexible Hours",
-        "description": "Work when you're most productive. We trust our team to manage their time effectively."
+        "title": "Horaires Flexibles",
+        "description": "Travaillez quand vous êtes le plus productif. Nous faisons confiance à notre équipe pour gérer son temps."
       },
       "byod": {
-        "title": "BYOD Policy",
-        "description": "Use the tools you're comfortable with. We provide equipment allowances for your setup."
+        "title": "Politique BYOD",
+        "description": "Utilisez les outils avec lesquels vous êtes à l'aise. Nous fournissons des allocations équipement."
       },
       "global": {
-        "title": "Global Team",
-        "description": "Collaborate with talented professionals from around the world on innovative projects."
+        "title": "Équipe Mondiale",
+        "description": "Collaborez avec des professionnels talentueux du monde entier sur des projets innovants."
       },
       "growth": {
-        "title": "Continuous Learning",
-        "description": "Access to training resources, conferences, and professional development opportunities."
+        "title": "Formation Continue",
+        "description": "Accès à des ressources de formation, conférences et opportunités de développement professionnel."
       }
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have questions or want to discuss a project? We'd love to hear from you.",
+    "title": "Contactez-nous",
+    "subtitle": "Des questions ou un projet à discuter ? Nous serions ravis de vous entendre.",
     "email": "Email",
-    "phone": "Phone",
-    "address": "Address",
-    "cta": "Contact Us"
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "cta": "Nous contacter"
   },
   "footer": {
-    "company": "Company",
+    "company": "Entreprise",
     "about": "À propos",
     "careers": "Carrières",
     "contact": "Contact",
     "services": "Services",
-    "mobile": "Mobile Development",
-    "cybersecurity": "Cybersecurity",
+    "mobile": "Développement Mobile",
+    "cybersecurity": "Cybersécurité",
     "blockchain": "Blockchain",
-    "marketing": "Digital Marketing",
-    "callcenter": "Call Center",
-    "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "copyright": "© 2024 AGH Data Agency Holding SA. All rights reserved."
+    "marketing": "Marketing Digital",
+    "callcenter": "Centre d'Appels",
+    "legal": "Légal",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "copyright": "© 2024 AGH Data Agency Holding SA. Tous droits réservés."
+  },
+  "common": {
+    "backToHome": "Retour à l'accueil"
+  },
+  "legal": {
+    "termsTitle": "Conditions Générales d'Utilisation",
+    "acceptance": "Acceptation des Conditions",
+    "services": "Services",
+    "userObligations": "Obligations de l'Utilisateur",
+    "intellectualProperty": "Propriété Intellectuelle",
+    "limitation": "Limitation de Responsabilité",
+    "privacy": "Vie Privée",
+    "modifications": "Modifications",
+    "contact": "Contact",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "toc": "Table des matières",
+    "sections": {
+      "identity": "Identité du responsable",
+      "dataCollected": "Données collectées",
+      "purpose": "Finalités du traitement",
+      "legalBasis": "Base légale",
+      "retention": "Durée de conservation",
+      "rights": "Vos droits RGPD",
+      "cookies": "Cookies",
+      "security": "Sécurité des données",
+      "contact": "Contact"
+    },
+    "identity": {
+      "title": "Identité du responsable de traitement",
+      "content": "Le responsable du traitement des données personnelles est :",
+      "company": "Société",
+      "email": "Email"
+    },
+    "dataCollected": {
+      "title": "Données personnelles collectées",
+      "intro": "Nous collectons les données suivantes :",
+      "contact": "Données de contact",
+      "contactDesc": "nom, prénom, adresse email, numéro de téléphone",
+      "navigation": "Données de navigation",
+      "navigationDesc": "adresse IP, type de navigateur, pages visitées",
+      "professional": "Données professionnelles",
+      "professionalDesc": "CV, lettre de motivation (candidatures)"
+    },
+    "purpose": {
+      "title": "Finalités du traitement",
+      "intro": "Vos données sont utilisées pour :",
+      "contact": "Répondre à vos demandes de contact",
+      "recruitment": "Traiter vos candidatures",
+      "improve": "Améliorer nos services et notre site web",
+      "legal": "Respecter nos obligations légales"
+    },
+    "legalBasis": {
+      "title": "Base légale du traitement",
+      "content": "Le traitement de vos données repose sur :",
+      "consent": "Votre consentement",
+      "consentDesc": "formulaire de contact, candidatures",
+      "legitimate": "Notre intérêt légitime",
+      "legitimateDesc": "amélioration des services, statistiques",
+      "legal": "Obligation légale",
+      "legalDesc": "conservation des données comptables"
+    },
+    "retention": {
+      "title": "Durée de conservation",
+      "intro": "Vos données sont conservées pendant :",
+      "contact": "Demandes de contact",
+      "contactDuration": "3 ans après le dernier contact",
+      "candidates": "Candidatures",
+      "candidatesDuration": "2 ans après réception",
+      "navigation": "Données de navigation",
+      "navigationDuration": "13 mois maximum"
+    },
+    "rights": {
+      "title": "Vos droits (RGPD)",
+      "intro": "Conformément au RGPD, vous disposez des droits suivants :",
+      "access": "Droit d'accès",
+      "accessDesc": "obtenir une copie de vos données",
+      "rectification": "Droit de rectification",
+      "rectificationDesc": "corriger vos données inexactes",
+      "erasure": "Droit à l'effacement",
+      "erasureDesc": "demander la suppression de vos données",
+      "portability": "Droit à la portabilité",
+      "portabilityDesc": "récupérer vos données dans un format structuré",
+      "opposition": "Droit d'opposition",
+      "oppositionDesc": "vous opposer au traitement de vos données",
+      "limitation": "Droit à la limitation",
+      "limitationDesc": "limiter le traitement de vos données",
+      "exercise": "Pour exercer vos droits, contactez-nous à :",
+      "complaint": "Vous pouvez également déposer une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés)."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "intro": "Notre site utilise des cookies pour :",
+      "essential": "Cookies essentiels",
+      "essentialDesc": "fonctionnement du site",
+      "analytics": "Cookies analytiques",
+      "analyticsDesc": "mesure d'audience (anonymisée)",
+      "manage": "Vous pouvez gérer vos préférences de cookies via les paramètres de votre navigateur."
+    },
+    "security": {
+      "title": "Sécurité des données",
+      "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, modification, divulgation ou destruction."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Pour toute question concernant cette politique de confidentialité, contactez-nous à :"
+    },
+    "lastUpdated": "Dernière mise à jour"
   }
 }

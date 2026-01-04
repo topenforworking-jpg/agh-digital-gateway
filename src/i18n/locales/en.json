@@ -121,5 +121,115 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyright": "© 2024 AGH Data Agency Holding SA. All rights reserved."
+  },
+  "common": {
+    "backToHome": "Back to Home"
+  },
+  "legal": {
+    "termsTitle": "Terms and Conditions",
+    "acceptance": "Acceptance of Terms",
+    "services": "Services",
+    "userObligations": "User Obligations",
+    "intellectualProperty": "Intellectual Property",
+    "limitation": "Limitation of Liability",
+    "privacy": "Privacy",
+    "modifications": "Modifications",
+    "contact": "Contact",
+    "lastUpdated": "Last updated"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "toc": "Table of Contents",
+    "sections": {
+      "identity": "Data Controller Identity",
+      "dataCollected": "Data Collected",
+      "purpose": "Processing Purposes",
+      "legalBasis": "Legal Basis",
+      "retention": "Data Retention",
+      "rights": "Your GDPR Rights",
+      "cookies": "Cookies",
+      "security": "Data Security",
+      "contact": "Contact"
+    },
+    "identity": {
+      "title": "Data Controller Identity",
+      "content": "The data controller is:",
+      "company": "Company",
+      "email": "Email"
+    },
+    "dataCollected": {
+      "title": "Personal Data Collected",
+      "intro": "We collect the following data:",
+      "contact": "Contact data",
+      "contactDesc": "name, surname, email address, phone number",
+      "navigation": "Navigation data",
+      "navigationDesc": "IP address, browser type, pages visited",
+      "professional": "Professional data",
+      "professionalDesc": "CV, cover letter (applications)"
+    },
+    "purpose": {
+      "title": "Processing Purposes",
+      "intro": "Your data is used to:",
+      "contact": "Respond to your contact requests",
+      "recruitment": "Process your applications",
+      "improve": "Improve our services and website",
+      "legal": "Comply with our legal obligations"
+    },
+    "legalBasis": {
+      "title": "Legal Basis for Processing",
+      "content": "The processing of your data is based on:",
+      "consent": "Your consent",
+      "consentDesc": "contact form, applications",
+      "legitimate": "Our legitimate interest",
+      "legitimateDesc": "service improvement, statistics",
+      "legal": "Legal obligation",
+      "legalDesc": "retention of accounting data"
+    },
+    "retention": {
+      "title": "Data Retention Period",
+      "intro": "Your data is retained for:",
+      "contact": "Contact requests",
+      "contactDuration": "3 years after last contact",
+      "candidates": "Applications",
+      "candidatesDuration": "2 years after receipt",
+      "navigation": "Navigation data",
+      "navigationDuration": "13 months maximum"
+    },
+    "rights": {
+      "title": "Your Rights (GDPR)",
+      "intro": "In accordance with GDPR, you have the following rights:",
+      "access": "Right of access",
+      "accessDesc": "obtain a copy of your data",
+      "rectification": "Right to rectification",
+      "rectificationDesc": "correct your inaccurate data",
+      "erasure": "Right to erasure",
+      "erasureDesc": "request deletion of your data",
+      "portability": "Right to data portability",
+      "portabilityDesc": "retrieve your data in a structured format",
+      "opposition": "Right to object",
+      "oppositionDesc": "object to the processing of your data",
+      "limitation": "Right to restriction",
+      "limitationDesc": "restrict the processing of your data",
+      "exercise": "To exercise your rights, contact us at:",
+      "complaint": "You can also lodge a complaint with your local data protection authority."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "intro": "Our website uses cookies for:",
+      "essential": "Essential cookies",
+      "essentialDesc": "website functionality",
+      "analytics": "Analytics cookies",
+      "analyticsDesc": "audience measurement (anonymized)",
+      "manage": "You can manage your cookie preferences through your browser settings."
+    },
+    "security": {
+      "title": "Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, modification, disclosure, or destruction."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "For any questions regarding this privacy policy, contact us at:"
+    },
+    "lastUpdated": "Last updated"
   }
 }

@@ -91,6 +91,13 @@ const Footer = () => {
               Terms & Conditions
             </Link>
             <span>•</span>
+            <Link 
+              to="/privacy-policy" 
+              className="hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span>•</span>
             <span>Remote First • BYOD Policy</span>
           </div>
         </div>
