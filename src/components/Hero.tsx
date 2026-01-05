@@ -16,8 +16,7 @@ const Hero = () => {
     t('hero.services.mobileApps'),
     t('hero.services.cybersecurity'),
     t('hero.services.blockchain'),
-    t('hero.services.digitalMarketing'),
-    t('hero.services.callCenter')
+    t('hero.services.digitalMarketing')
   ];
 
   return (

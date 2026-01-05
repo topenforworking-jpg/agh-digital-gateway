@@ -1,4 +1,4 @@
-import { Smartphone, Shield, Database, Megaphone, Headphones } from "lucide-react";
+import { Smartphone, Shield, Database, Megaphone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -30,12 +30,6 @@ const Expertise = () => {
       title: t('expertise.services.marketing.title'),
       description: t('expertise.services.marketing.description'),
       technologies: ["SEO", "Analytics", "Campaigns"],
-    },
-    {
-      icon: Headphones,
-      title: t('expertise.services.callcenter.title'),
-      description: t('expertise.services.callcenter.description'),
-      technologies: ["Support", "CRM", "Multilingual"],
     },
   ];
 

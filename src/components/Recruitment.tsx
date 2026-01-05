@@ -125,14 +125,6 @@ const Recruitment = () => {
       location: "Remote",
       formUrl: "", // À remplir avec le lien Google Form
     },
-    {
-      title: "Call Center Team Lead",
-      description: "Lead customer support operations and manage multilingual teams. Implement quality assurance and optimize service delivery.",
-      skills: ["Team Management", "CRM Systems", "Quality Assurance", "Training", "Multilingual"],
-      type: "Full-time",
-      location: "Remote",
-      formUrl: "", // À remplir avec le lien Google Form
-    },
   ];
 
   const handleApply = (formUrl: string) => {
