@@ -2,12 +2,21 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const TermsAndConditions = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language === "fr" ? "fr_FR" : "en_US";
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Conditions Générales d'Utilisation"
+        description="Conditions générales d'utilisation d'AGH Data Agency Holding SA. Consultez nos termes de service, obligations des utilisateurs et politique de propriété intellectuelle."
+        keywords="CGU, conditions générales, termes utilisation, mentions légales, AGH Data Agency"
+        url="https://aghdata.com/terms-and-conditions"
+        locale={locale}
+      />
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <Link to="/">
           <Button variant="ghost" className="mb-8">
