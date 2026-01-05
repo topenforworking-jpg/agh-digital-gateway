@@ -116,6 +116,13 @@
     "terms": "Conditions d'Utilisation",
     "copyright": "© 2024 AGH Data Agency Holding SA. Tous droits réservés."
   },
+  "cookies": {
+    "title": "Nous utilisons des cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience sur notre site, analyser le trafic et personnaliser le contenu. En cliquant sur « Accepter », vous consentez à l'utilisation de tous les cookies conformément à notre",
+    "privacyLink": "Politique de Confidentialité",
+    "accept": "Accepter tous les cookies",
+    "decline": "Refuser les cookies non essentiels"
+  },
   "common": {
     "backToHome": "Retour à l'accueil"
   },
