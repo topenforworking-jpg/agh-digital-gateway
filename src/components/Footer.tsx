@@ -73,7 +73,6 @@ const Footer = () => {
               <li>Cybersecurity</li>
               <li>Blockchain</li>
               <li>Digital Marketing</li>
-              <li>Call Center</li>
             </ul>
           </div>
         </div>

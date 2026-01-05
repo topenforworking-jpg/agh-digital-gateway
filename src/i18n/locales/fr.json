@@ -15,8 +15,7 @@
       "mobileApps": "Apps Mobiles",
       "cybersecurity": "Cybersécurité",
       "blockchain": "Blockchain",
-      "digitalMarketing": "Marketing Digital",
-      "callCenter": "Centre d'Appels"
+      "digitalMarketing": "Marketing Digital"
     },
     "cta": "Rejoindre notre équipe",
     "stats": {
@@ -44,10 +43,6 @@
       "marketing": {
         "title": "Marketing Digital",
         "description": "Stratégies marketing basées sur les données, optimisation SEO et gestion complète de campagnes."
-      },
-      "callcenter": {
-        "title": "Services Centre d'Appels",
-        "description": "Solutions de support client professionnel avec capacités multilingues et disponibilité 24/7."
       }
     }
   },
@@ -116,7 +111,6 @@
     "cybersecurity": "Cybersécurité",
     "blockchain": "Blockchain",
     "marketing": "Marketing Digital",
-    "callcenter": "Centre d'Appels",
     "legal": "Légal",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation",

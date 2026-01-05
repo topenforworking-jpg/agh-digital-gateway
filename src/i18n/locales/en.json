@@ -15,8 +15,7 @@
       "mobileApps": "Mobile Apps",
       "cybersecurity": "Cybersecurity",
       "blockchain": "Blockchain",
-      "digitalMarketing": "Digital Marketing",
-      "callCenter": "Call Center"
+      "digitalMarketing": "Digital Marketing"
     },
     "cta": "Join Our Remote Team",
     "stats": {
@@ -44,10 +43,6 @@
       "marketing": {
         "title": "Digital Marketing",
         "description": "Data-driven marketing strategies, SEO optimization, and comprehensive campaign management."
-      },
-      "callcenter": {
-        "title": "Call Center Services",
-        "description": "Professional customer support solutions with multilingual capabilities and 24/7 availability."
       }
     }
   },
@@ -116,7 +111,6 @@
     "cybersecurity": "Cybersecurity",
     "blockchain": "Blockchain",
     "marketing": "Digital Marketing",
-    "callcenter": "Call Center",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
