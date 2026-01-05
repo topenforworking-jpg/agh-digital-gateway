@@ -8,7 +8,6 @@ AGH Data Agency est une entreprise de services IT et consulting spécialisée da
 - **Développement d'applications mobiles** (Flutter, Django, LLM)
 - **Cybersécurité & Blockchain**
 - **Marketing Digital**
-- **Services de Call Center**
 
 **Modèle de travail:** Remote First avec politique BYOD (Bring Your Own Device)
 **Taille:** 201-500 employés
@@ -24,6 +23,18 @@ Email: agh.dataagencyholdingsa@gmail.com
 - **Tailwind CSS** pour le design responsive
 - **shadcn/ui** pour les composants UI
 - **Lucide React** pour les icônes
+- **i18next** pour l'internationalisation (FR/EN)
+- **React Router** pour la navigation
+
+## 🌐 Internationalisation
+
+Le site est disponible en **français** et **anglais** avec détection automatique de la langue du navigateur. Les utilisateurs peuvent changer de langue via le sélecteur dans la navigation.
+
+## 🔒 Conformité RGPD
+
+- **Bandeau de cookies** : Consentement utilisateur requis avant l'utilisation de cookies non essentiels
+- **Politique de confidentialité** : Page dédiée (`/privacy-policy`) détaillant la collecte et le traitement des données
+- **Conditions générales** : Page dédiée (`/terms-and-conditions`)
 
 ## 🚀 Installation et développement local
 
@@ -88,22 +99,33 @@ netlify deploy --prod
 
 ```
 src/
-├── components/          # Composants React
-│   ├── Navigation.tsx   # Barre de navigation
-│   ├── Hero.tsx         # Section hero
-│   ├── Expertise.tsx    # Services offerts
-│   ├── Recruitment.tsx  # Postes ouverts
+├── components/           # Composants React
+│   ├── Navigation.tsx    # Barre de navigation
+│   ├── Hero.tsx          # Section hero
+│   ├── Expertise.tsx     # Services offerts
+│   ├── Recruitment.tsx   # Postes ouverts
 │   ├── RemoteCulture.tsx # Culture remote
-│   ├── Contact.tsx      # Formulaire de contact
-│   └── Footer.tsx       # Pied de page
+│   ├── Contact.tsx       # Formulaire de contact
+│   ├── Footer.tsx        # Pied de page
+│   ├── CookieConsent.tsx # Bandeau cookies RGPD
+│   └── LanguageSwitcher.tsx # Sélecteur de langue
 ├── pages/
-│   ├── Index.tsx        # Page principale
-│   └── NotFound.tsx     # Page 404
-├── index.css            # Styles globaux et design system
-└── main.tsx             # Point d'entrée
+│   ├── Index.tsx         # Page principale
+│   ├── PrivacyPolicy.tsx # Politique de confidentialité
+│   ├── TermsAndConditions.tsx # CGU
+│   └── NotFound.tsx      # Page 404
+├── i18n/
+│   ├── config.ts         # Configuration i18next
+│   └── locales/
+│       ├── en.json       # Traductions anglaises
+│       └── fr.json       # Traductions françaises
+├── hooks/
+│   └── useScrollAnimation.ts # Hook d'animation au scroll
+├── index.css             # Styles globaux et design system
+└── main.tsx              # Point d'entrée
 
 public/
-└── logo.jpg             # Logo de l'entreprise
+└── logo.jpg              # Logo de l'entreprise
 ```
 
 ## 🎨 Design System
@@ -131,6 +153,9 @@ Le projet utilise un design system cohérent avec:
 - ✅ SEO optimisé
 - ✅ Performance optimisée (<3s)
 - ✅ Accessible WCAG 2.1 AA
+- ✅ Multilingue (FR/EN)
+- ✅ Bandeau cookies RGPD
+- ✅ Pages légales (CGU, Politique de confidentialité)
 
 ## 🤝 Contribuer
 
