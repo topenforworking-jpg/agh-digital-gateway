@@ -35,7 +35,7 @@ const TermsAndConditions = () => {
               2. {t("legal.services", "Services")}
             </h2>
             <p>
-              AGH Data Agency Holding SA provides digital solutions including mobile app development, cybersecurity, blockchain solutions, digital marketing, and call center services. We reserve the right to modify, suspend, or discontinue any service at any time.
+              AGH Data Agency Holding SA provides digital solutions including mobile app development, cybersecurity, blockchain solutions, and digital marketing. We reserve the right to modify, suspend, or discontinue any service at any time.
             </p>
           </section>
 
