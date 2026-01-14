@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aghdataagency.com/sitemap.xml
+Sitemap: https://agh-data-agency-holding.netlify.app/sitemap.xml
