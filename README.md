@@ -103,14 +103,18 @@ src/
 │   ├── Navigation.tsx    # Barre de navigation
 │   ├── Hero.tsx          # Section hero
 │   ├── Expertise.tsx     # Services offerts
-│   ├── Recruitment.tsx   # Postes ouverts
+│   ├── Recruitment.tsx   # Liste des postes ouverts
 │   ├── RemoteCulture.tsx # Culture remote
 │   ├── Contact.tsx       # Formulaire de contact
 │   ├── Footer.tsx        # Pied de page
 │   ├── CookieConsent.tsx # Bandeau cookies RGPD
+│   ├── SEO.tsx           # Composant SEO réutilisable
 │   └── LanguageSwitcher.tsx # Sélecteur de langue
+├── data/
+│   └── jobs.ts           # Données centralisées des offres d'emploi
 ├── pages/
 │   ├── Index.tsx         # Page principale
+│   ├── JobDetail.tsx     # Page détail d'une offre d'emploi
 │   ├── PrivacyPolicy.tsx # Politique de confidentialité
 │   ├── TermsAndConditions.tsx # CGU
 │   └── NotFound.tsx      # Page 404
@@ -125,7 +129,9 @@ src/
 └── main.tsx              # Point d'entrée
 
 public/
-└── logo.jpg              # Logo de l'entreprise
+├── logo.jpg              # Logo de l'entreprise
+├── sitemap.xml           # Sitemap pour SEO
+└── robots.txt            # Configuration crawlers
 ```
 
 ## 🎨 Design System
@@ -149,13 +155,22 @@ Le projet utilise un design system cohérent avec:
 - ✅ Mode sombre/clair
 - ✅ Navigation smooth scroll
 - ✅ Formulaire de contact avec validation
-- ✅ Section recrutement avec liens externes
-- ✅ SEO optimisé
+- ✅ Section recrutement avec pages détaillées (`/jobs/:id`)
+- ✅ SEO optimisé (meta tags, Open Graph, JSON-LD, sitemap.xml)
 - ✅ Performance optimisée (<3s)
 - ✅ Accessible WCAG 2.1 AA
 - ✅ Multilingue (FR/EN)
 - ✅ Bandeau cookies RGPD
 - ✅ Pages légales (CGU, Politique de confidentialité)
+
+## 🗺️ Routes disponibles
+
+| Route | Description |
+|-------|-------------|
+| `/` | Page d'accueil |
+| `/jobs/:id` | Détail d'une offre d'emploi (1-14) |
+| `/terms-and-conditions` | Conditions générales d'utilisation |
+| `/privacy-policy` | Politique de confidentialité |
 
 ## 🤝 Contribuer
 
