@@ -3,6 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -13,7 +15,16 @@ import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const AppContent = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LoadingScreen />
@@ -30,6 +41,15 @@ const App = () => (
         </Routes>
         <CookieConsent />
       </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={new QueryClient()}>
+    <TooltipProvider>
+      <AppContent />
     </TooltipProvider>
   </QueryClientProvider>
 );
