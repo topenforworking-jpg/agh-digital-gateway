@@ -16,7 +16,7 @@ const defaultMeta = {
   description: "Solutions digitales innovantes : développement d'applications mobiles, cybersécurité, blockchain et marketing digital. Entreprise 100% remote.",
   keywords: "développement mobile, Flutter, cybersécurité, blockchain, marketing digital, Django, applications mobiles, sécurité informatique, DeFi, smart contracts",
   image: "/logo.jpg",
-  url: "https://aghdata.com",
+  url: "https://agh-data-agency-holding.netlify.app",
   type: "website" as const,
   locale: "fr_FR",
 };

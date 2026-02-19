@@ -15,3 +15,6 @@ Allow: /
 
 # Sitemap
 Sitemap: https://agh-data-agency-holding.netlify.app/sitemap.xml
+
+# Host
+Host: https://agh-data-agency-holding.netlify.app

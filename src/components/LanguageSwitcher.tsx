@@ -17,13 +17,14 @@ const LanguageSwitcher = () => {
 
   return (
     <Select value={i18n.language} onValueChange={changeLanguage}>
-      <SelectTrigger className="w-[120px] h-9 gap-2">
+      <SelectTrigger className="w-[130px] h-9 gap-2">
         <Languages className="h-4 w-4" />
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="fr">Français</SelectItem>
         <SelectItem value="en">English</SelectItem>
+        <SelectItem value="ar">العربية</SelectItem>
       </SelectContent>
     </Select>
   );
