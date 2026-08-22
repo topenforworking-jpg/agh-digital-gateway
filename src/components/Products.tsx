@@ -11,7 +11,8 @@ import {
   BookOpen, 
   Palette, 
   ShoppingBag,
-  Zap
+  Zap,
+  Image as ImageIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -37,6 +38,7 @@ const Products = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [previewImage, setPreviewImage] = useState<{ title: string; src: string } | null>(null);
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch =
@@ -147,24 +149,57 @@ const Products = () => {
             return (
               <Card
                 key={product.id}
-                className="group relative flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 bg-card/80 backdrop-blur rounded-2xl overflow-hidden border-border"
+                className="group relative flex flex-col justify-between hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 bg-card/90 backdrop-blur rounded-2xl overflow-hidden border-border"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {product.featured && (
-                  <div className="absolute top-0 right-0">
-                    <span className="bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                  <div className="absolute top-0 right-0 z-20">
+                    <span className="bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider shadow-sm">
                       Featured
                     </span>
                   </div>
                 )}
+
+                {/* Optional Preview image header */}
+                {product.preview && (
+                  <div 
+                    className="relative h-44 w-full overflow-hidden bg-muted cursor-pointer group/img border-b border-border/40"
+                    onClick={() => setPreviewImage({ title: product.name, src: product.preview })}
+                  >
+                    <img
+                      src={product.preview}
+                      alt={`${product.name} screenshot`}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity flex items-end p-3">
+                      <span className="text-white text-xs font-medium flex items-center gap-1.5 bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        <ImageIcon className="h-3 w-3" /> Agrandir l'aperçu
+                      </span>
+                    </div>
+                  </div>
+                )}
                 
                 <div>
-                  <CardHeader className="pb-4">
+                  <CardHeader className="pb-3 pt-5">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        <CategoryIcon className="h-6 w-6" />
+                      {/* App Icon */}
+                      <div className="w-14 h-14 rounded-2xl bg-card border border-border p-1 shadow-sm shrink-0 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                        {product.icon ? (
+                          <img
+                            src={product.icon}
+                            alt={product.name}
+                            className="w-full h-full object-cover rounded-xl"
+                            onError={(e) => {
+                              (e.target as HTMLElement).style.display = "none";
+                            }}
+                          />
+                        ) : (
+                          <CategoryIcon className="h-7 w-7 text-primary" />
+                        )}
                       </div>
-                      <div className="flex-1 min-w-0 pr-6">
+
+                      <div className="flex-1 min-w-0 pr-2">
                         <CardTitle className="text-lg font-heading font-bold text-foreground leading-snug line-clamp-2">
                           {product.name}
                         </CardTitle>
@@ -195,7 +230,7 @@ const Products = () => {
                   </CardContent>
                 </div>
 
-                <div className="p-6 pt-2 border-t border-border/50 mt-4 flex items-center justify-between">
+                <div className="p-6 pt-3 border-t border-border/50 mt-4 flex items-center justify-between">
                   <Badge variant="outline" className="text-xs text-muted-foreground">
                     {product.categoryLabel}
                   </Badge>
@@ -244,6 +279,33 @@ const Products = () => {
             >
               {t("products.resetFilters", "Réinitialiser les filtres")}
             </Button>
+          </div>
+        )}
+
+        {/* Lightbox / Modal for Preview */}
+        {previewImage && (
+          <div 
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+            onClick={() => setPreviewImage(null)}
+          >
+            <div 
+              className="relative max-w-4xl max-h-[90vh] bg-card border border-border rounded-2xl overflow-hidden shadow-2xl p-2"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center px-4 py-2 border-b border-border mb-2">
+                <h3 className="font-heading font-bold text-foreground truncate">{previewImage.title}</h3>
+                <Button variant="ghost" size="sm" onClick={() => setPreviewImage(null)} className="rounded-full">
+                  Fermer
+                </Button>
+              </div>
+              <div className="overflow-auto max-h-[75vh] flex justify-center">
+                <img 
+                  src={previewImage.src} 
+                  alt={previewImage.title} 
+                  className="rounded-xl object-contain max-h-[70vh] w-auto"
+                />
+              </div>
+            </div>
           </div>
         )}
       </div>

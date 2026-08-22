@@ -7,7 +7,8 @@ export interface Product {
   description: string;
   tags: string[];
   playStoreUrl: string;
-  icon?: string;
+  icon: string;
+  preview: string;
   featured?: boolean;
 }
 
@@ -21,6 +22,8 @@ export const products: Product[] = [
     description: "Assistant intelligent de perte de poids et suivi diététique personnalisé avec réalité augmentée, fonctionnant 100% hors ligne.",
     tags: ["AI", "AR", "Offline", "Santé"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.weight",
+    icon: "/apps/weight-loss/icon.png",
+    preview: "/apps/weight-loss/preview.png",
     featured: true,
   },
   {
@@ -32,6 +35,8 @@ export const products: Product[] = [
     description: "Conseils et routines de soins naturels de la peau alimentés par l'IA et visualisation AR sans connexion internet.",
     tags: ["AI", "AR", "Offline", "Beauté"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.naturalbeauty",
+    icon: "/apps/bio-skin-care/icon.png",
+    preview: "/apps/bio-skin-care/preview.png",
   },
   {
     id: "baby-food",
@@ -42,6 +47,8 @@ export const products: Product[] = [
     description: "Guide nutritionnel complet et recettes saines pour bébés et tout-petits avec assistance intelligente hors ligne.",
     tags: ["AI", "AR", "Offline", "Nutrition"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.nutritionbb",
+    icon: "/apps/baby-food/icon.png",
+    preview: "/apps/baby-food/preview.png",
   },
   {
     id: "food-recipes",
@@ -52,6 +59,8 @@ export const products: Product[] = [
     description: "Milliers de recettes du monde interactives avec instructions pas-à-pas en AR et génération intelligente hors ligne.",
     tags: ["AI", "AR", "Offline", "Cuisine"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.recettesmondiales",
+    icon: "/apps/food-recipes/icon.png",
+    preview: "/apps/food-recipes/preview.png",
     featured: true,
   },
   {
@@ -63,6 +72,8 @@ export const products: Product[] = [
     description: "Recettes halal délicieuses et variées pour le quotidien et les occasions spéciales, accessibles partout sans réseau.",
     tags: ["AI", "AR", "Offline", "Halal"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ramadanhalal",
+    icon: "/apps/halal-recipes/icon.png",
+    preview: "/apps/halal-recipes/preview.png",
   },
   {
     id: "home-design",
@@ -73,6 +84,8 @@ export const products: Product[] = [
     description: "Concevez et visualisez vos espaces intérieurs en réalité augmentée avec des suggestions IA de décoration hors ligne.",
     tags: ["AI", "AR", "Offline", "Design"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.smartdeco",
+    icon: "/apps/home-design/icon.png",
+    preview: "/apps/home-design/preview.png",
     featured: true,
   },
   {
@@ -84,6 +97,8 @@ export const products: Product[] = [
     description: "Coach sportif à domicile avec guidage des postures en AR et programmes d'entraînement sur-mesure hors ligne.",
     tags: ["AI", "AR", "Offline", "Fitness"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.fitnesscoach",
+    icon: "/apps/home-workout/icon.png",
+    preview: "/apps/home-workout/preview.png",
     featured: true,
   },
   {
@@ -95,6 +110,8 @@ export const products: Product[] = [
     description: "Guide complet de la prière avec qibla AR, horaires précis et apprentissage interactif hors ligne.",
     tags: ["AI", "AR", "Offline", "Prière"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.salat",
+    icon: "/apps/prayer-guide/icon.png",
+    preview: "/apps/prayer-guide/preview.png",
   },
   {
     id: "quit-vaping",
@@ -105,6 +122,8 @@ export const products: Product[] = [
     description: "Accompagnement intelligent et suivi motivant pour arrêter la vape et retrouver une vie saine, 100% hors ligne.",
     tags: ["AI", "AR", "Offline", "Santé"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.vapestopper",
+    icon: "/apps/quit-vaping/icon.png",
+    preview: "/apps/quit-vaping/preview.png",
   },
   {
     id: "quran-majeed",
@@ -115,6 +134,8 @@ export const products: Product[] = [
     description: "Lecture, écoute et étude du Saint Coran avec tajweed interactif et traductions multiples en mode hors ligne.",
     tags: ["AI", "AR", "Offline", "Coran"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coran",
+    icon: "/apps/quran-majeed/icon.png",
+    preview: "/apps/quran-majeed/preview.png",
     featured: true,
   },
   {
@@ -126,6 +147,8 @@ export const products: Product[] = [
     description: "Assistant d'étude personnel : synthèses, fiches de révision intelligentes et aide aux devoirs hors ligne.",
     tags: ["AI", "AR", "Offline", "Éducation"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.studyhelper",
+    icon: "/apps/study-helper/icon.png",
+    preview: "/apps/study-helper/preview.png",
   },
   {
     id: "therapy-ai",
@@ -136,6 +159,8 @@ export const products: Product[] = [
     description: "Espace de soutien émotionnel, exercices de relaxation et journal guidé avec IA bienveillante hors ligne.",
     tags: ["AI", "AR", "Offline", "Bien-être"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.therapy",
+    icon: "/apps/therapy-ai/icon.png",
+    preview: "/apps/therapy-ai/preview.png",
   },
   {
     id: "winning-items",
@@ -146,6 +171,8 @@ export const products: Product[] = [
     description: "Outil d'analyse et de détection de produits gagnants pour le e-commerce et le dropshipping avec insights IA.",
     tags: ["AI", "AR", "Offline", "Business"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dropshippingfinder",
+    icon: "/apps/winning-items/icon.png",
+    preview: "/apps/winning-items/preview.png",
   },
   {
     id: "prophets-stories",
@@ -156,6 +183,8 @@ export const products: Product[] = [
     description: "Récits captivants des histoires des prophètes avec illustrations immersives et narration hors ligne.",
     tags: ["AI", "AR", "Offline", "Histoires"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.stories",
+    icon: "/apps/prophets-stories/icon.png",
+    preview: "/apps/prophets-stories/preview.png",
   },
   {
     id: "darija-quest",
@@ -166,6 +195,8 @@ export const products: Product[] = [
     description: "Jeu éducatif interactif pour apprendre et maîtriser l'arabe dialectal (Darija) de manière ludique.",
     tags: ["Apprentissage", "Jeux", "Darija", "Culture"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.darijaquest",
+    icon: "/apps/darija-quest/icon.png",
+    preview: "/apps/darija-quest/preview.png",
   },
   {
     id: "dressing-try-on",
@@ -176,6 +207,8 @@ export const products: Product[] = [
     description: "Cabine d'essayage virtuelle en réalité augmentée pour essayer des tenues et composer votre garde-robe hors ligne.",
     tags: ["AR", "Offline", "Mode", "Style"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dresser",
+    icon: "/apps/dressing-try-on/icon.png",
+    preview: "/apps/dressing-try-on/preview.png",
   },
   {
     id: "haircuts-coach",
@@ -186,6 +219,8 @@ export const products: Product[] = [
     description: "Essayage de coupes de cheveux et styles de barbe en AR avec conseils morphologiques personnalisés par l'IA.",
     tags: ["AI", "AR", "Offline", "Coiffure"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coiffure",
+    icon: "/apps/haircuts-coach/icon.png",
+    preview: "/apps/haircuts-coach/preview.png",
   },
   {
     id: "makeup-coach",
@@ -196,6 +231,8 @@ export const products: Product[] = [
     description: "Tutoriels de maquillage interactifs en temps réel avec miroir virtuel AR et coaching esthétique hors ligne.",
     tags: ["AI", "AR", "Offline", "Maquillage"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.esthetique",
+    icon: "/apps/makeup-coach/icon.png",
+    preview: "/apps/makeup-coach/preview.png",
   },
   {
     id: "ruqya-assistant",
@@ -206,6 +243,8 @@ export const products: Product[] = [
     description: "Guide spirituel et invocations authentiques de la Ruqya avec récitations audio et explications hors ligne.",
     tags: ["AI", "AR", "Offline", "Ruqya"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ruqya",
+    icon: "/apps/ruqya-assistant/icon.png",
+    preview: "/apps/ruqya-assistant/preview.png",
   },
 ];
 
