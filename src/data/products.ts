@@ -364,6 +364,8 @@ export const products: Product[] = [
     ],
     tags: ["Apprentissage", "Jeux", "Darija", "Maroc", "Culture", "Langues"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.darijaquest",
+    icon: "/apps/darija-quest/icon.png",
+    preview: "/apps/darija-quest/preview.png",
     version: "1.4.0",
     rating: "4.8",
     compatibility: "Android 8.0+",
