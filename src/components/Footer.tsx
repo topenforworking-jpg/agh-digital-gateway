@@ -40,6 +40,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#products"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a
                   href="#careers"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >

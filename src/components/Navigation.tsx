@@ -33,6 +33,7 @@ const Navigation = () => {
 
   const navLinks = [
     { href: "#expertise", label: t('navigation.expertise') },
+    { href: "#products", label: t('navigation.products', 'Nos Produits') },
     { href: "#careers", label: t('navigation.careers') },
     { href: "#culture", label: t('navigation.culture') },
     { href: "#contact", label: t('navigation.contact') },

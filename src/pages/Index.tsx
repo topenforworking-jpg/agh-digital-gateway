@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Expertise from "@/components/Expertise";
+import Products from "@/components/Products";
 import Recruitment from "@/components/Recruitment";
 import RemoteCulture from "@/components/RemoteCulture";
 import Contact from "@/components/Contact";
@@ -23,6 +24,7 @@ const Index = () => {
       <main>
         <Hero />
         <Expertise />
+        <Products />
         <Recruitment />
         <RemoteCulture />
         <Contact />

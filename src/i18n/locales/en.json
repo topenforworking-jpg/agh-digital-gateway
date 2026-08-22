@@ -1,10 +1,33 @@
 {
   "navigation": {
     "expertise": "Expertise",
+    "products": "Our Products",
     "careers": "Careers",
     "culture": "Culture",
     "contact": "Contact",
     "joinUs": "Join Us"
+  },
+  "products": {
+    "badge": "Our Mobile Ecosystem",
+    "title": "Our Apps & Products",
+    "subtitle": "Explore our suite of innovative mobile applications powered by Artificial Intelligence, Augmented Reality, and engineered to work 100% offline.",
+    "searchPlaceholder": "Search an app by name, package name or technology...",
+    "showingCount": "Showing",
+    "appsCount": "apps",
+    "offlineBadge": "100% Offline & AR Ready",
+    "noResultsTitle": "No apps found",
+    "noResultsDesc": "No product matches your search. Try different keywords or reset filters.",
+    "resetFilters": "Reset filters",
+    "categories": {
+      "all": "All Apps",
+      "health": "Health & Fitness",
+      "beauty": "Beauty & Fashion",
+      "food": "Food & Recipes",
+      "spiritual": "Spirituality",
+      "education": "Education & Games",
+      "lifestyle": "Lifestyle & Deco",
+      "business": "Business"
+    }
   },
   "hero": {
     "badge": "Now Hiring: Remote-First Positions",

@@ -1,0 +1,218 @@
+export interface Product {
+  id: string;
+  name: string;
+  packageName: string;
+  category: 'health' | 'food' | 'spiritual' | 'lifestyle' | 'education' | 'beauty' | 'business';
+  categoryLabel: string;
+  description: string;
+  tags: string[];
+  playStoreUrl: string;
+  icon?: string;
+  featured?: boolean;
+}
+
+export const products: Product[] = [
+  {
+    id: "weight-loss",
+    name: "AI AR Offline DIET Weight Loss",
+    packageName: "com.bilgassimel.weight",
+    category: "health",
+    categoryLabel: "Santé & Forme",
+    description: "Assistant intelligent de perte de poids et suivi diététique personnalisé avec réalité augmentée, fonctionnant 100% hors ligne.",
+    tags: ["AI", "AR", "Offline", "Santé"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.weight",
+    featured: true,
+  },
+  {
+    id: "bio-skin-care",
+    name: "AI AR Offline: BIO Skin Care",
+    packageName: "com.bilgassimel.naturalbeauty",
+    category: "beauty",
+    categoryLabel: "Beauté & Soins",
+    description: "Conseils et routines de soins naturels de la peau alimentés par l'IA et visualisation AR sans connexion internet.",
+    tags: ["AI", "AR", "Offline", "Beauté"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.naturalbeauty",
+  },
+  {
+    id: "baby-food",
+    name: "AI AR Offline: Baby Food",
+    packageName: "com.bilgassimel.nutritionbb",
+    category: "food",
+    categoryLabel: "Alimentation & Bébé",
+    description: "Guide nutritionnel complet et recettes saines pour bébés et tout-petits avec assistance intelligente hors ligne.",
+    tags: ["AI", "AR", "Offline", "Nutrition"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.nutritionbb",
+  },
+  {
+    id: "food-recipes",
+    name: "AI AR Offline: Food Recipes",
+    packageName: "com.bilgassimel.recettesmondiales",
+    category: "food",
+    categoryLabel: "Cuisine & Recettes",
+    description: "Milliers de recettes du monde interactives avec instructions pas-à-pas en AR et génération intelligente hors ligne.",
+    tags: ["AI", "AR", "Offline", "Cuisine"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.recettesmondiales",
+    featured: true,
+  },
+  {
+    id: "halal-recipes",
+    name: "AI AR Offline: Halal Recipes",
+    packageName: "com.bilgassimel.ramadanhalal",
+    category: "food",
+    categoryLabel: "Cuisine & Recettes",
+    description: "Recettes halal délicieuses et variées pour le quotidien et les occasions spéciales, accessibles partout sans réseau.",
+    tags: ["AI", "AR", "Offline", "Halal"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ramadanhalal",
+  },
+  {
+    id: "home-design",
+    name: "AI AR Offline: Home Design",
+    packageName: "com.bilgassimel.smartdeco",
+    category: "lifestyle",
+    categoryLabel: "Maison & Décoration",
+    description: "Concevez et visualisez vos espaces intérieurs en réalité augmentée avec des suggestions IA de décoration hors ligne.",
+    tags: ["AI", "AR", "Offline", "Design"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.smartdeco",
+    featured: true,
+  },
+  {
+    id: "home-workout",
+    name: "AI AR Offline: Home Workout",
+    packageName: "com.bilgassimel.fitnesscoach",
+    category: "health",
+    categoryLabel: "Santé & Forme",
+    description: "Coach sportif à domicile avec guidage des postures en AR et programmes d'entraînement sur-mesure hors ligne.",
+    tags: ["AI", "AR", "Offline", "Fitness"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.fitnesscoach",
+    featured: true,
+  },
+  {
+    id: "prayer-guide",
+    name: "AI AR Offline: Prayer Guide",
+    packageName: "com.bilgassimel.salat",
+    category: "spiritual",
+    categoryLabel: "Spiritualité",
+    description: "Guide complet de la prière avec qibla AR, horaires précis et apprentissage interactif hors ligne.",
+    tags: ["AI", "AR", "Offline", "Prière"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.salat",
+  },
+  {
+    id: "quit-vaping",
+    name: "AI AR Offline: Quit Vaping",
+    packageName: "com.bilgassimel.vapestopper",
+    category: "health",
+    categoryLabel: "Santé & Forme",
+    description: "Accompagnement intelligent et suivi motivant pour arrêter la vape et retrouver une vie saine, 100% hors ligne.",
+    tags: ["AI", "AR", "Offline", "Santé"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.vapestopper",
+  },
+  {
+    id: "quran-majeed",
+    name: "AI AR Offline: Quran Majeed",
+    packageName: "com.bilgassimel.coran",
+    category: "spiritual",
+    categoryLabel: "Spiritualité",
+    description: "Lecture, écoute et étude du Saint Coran avec tajweed interactif et traductions multiples en mode hors ligne.",
+    tags: ["AI", "AR", "Offline", "Coran"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coran",
+    featured: true,
+  },
+  {
+    id: "study-helper",
+    name: "AI AR Offline: Study Helper",
+    packageName: "com.bilgassimel.studyhelper",
+    category: "education",
+    categoryLabel: "Éducation & Études",
+    description: "Assistant d'étude personnel : synthèses, fiches de révision intelligentes et aide aux devoirs hors ligne.",
+    tags: ["AI", "AR", "Offline", "Éducation"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.studyhelper",
+  },
+  {
+    id: "therapy-ai",
+    name: "AI AR Offline: Therapy AI",
+    packageName: "com.bilgassimel.therapy",
+    category: "health",
+    categoryLabel: "Santé & Bien-être",
+    description: "Espace de soutien émotionnel, exercices de relaxation et journal guidé avec IA bienveillante hors ligne.",
+    tags: ["AI", "AR", "Offline", "Bien-être"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.therapy",
+  },
+  {
+    id: "winning-items",
+    name: "AI AR Offline: Winning Items",
+    packageName: "com.bilgassimel.dropshippingfinder",
+    category: "business",
+    categoryLabel: "E-Commerce & Business",
+    description: "Outil d'analyse et de détection de produits gagnants pour le e-commerce et le dropshipping avec insights IA.",
+    tags: ["AI", "AR", "Offline", "Business"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dropshippingfinder",
+  },
+  {
+    id: "prophets-stories",
+    name: "AI AR Offline: Prophets Stories",
+    packageName: "com.bilgassimel.stories",
+    category: "spiritual",
+    categoryLabel: "Spiritualité & Culture",
+    description: "Récits captivants des histoires des prophètes avec illustrations immersives et narration hors ligne.",
+    tags: ["AI", "AR", "Offline", "Histoires"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.stories",
+  },
+  {
+    id: "darija-quest",
+    name: "Darija Quest",
+    packageName: "com.bilgassimel.darijaquest",
+    category: "education",
+    categoryLabel: "Éducation & Jeux",
+    description: "Jeu éducatif interactif pour apprendre et maîtriser l'arabe dialectal (Darija) de manière ludique.",
+    tags: ["Apprentissage", "Jeux", "Darija", "Culture"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.darijaquest",
+  },
+  {
+    id: "dressing-try-on",
+    name: "Dressing try on ar offline",
+    packageName: "com.bilgassimel.dresser",
+    category: "beauty",
+    categoryLabel: "Mode & Style",
+    description: "Cabine d'essayage virtuelle en réalité augmentée pour essayer des tenues et composer votre garde-robe hors ligne.",
+    tags: ["AR", "Offline", "Mode", "Style"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dresser",
+  },
+  {
+    id: "haircuts-coach",
+    name: "Haircuts coach AI AR offline",
+    packageName: "com.bilgassimel.coiffure",
+    category: "beauty",
+    categoryLabel: "Beauté & Soins",
+    description: "Essayage de coupes de cheveux et styles de barbe en AR avec conseils morphologiques personnalisés par l'IA.",
+    tags: ["AI", "AR", "Offline", "Coiffure"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coiffure",
+  },
+  {
+    id: "makeup-coach",
+    name: "Makeup ai ar coach offline",
+    packageName: "com.bilgassimel.esthetique",
+    category: "beauty",
+    categoryLabel: "Beauté & Soins",
+    description: "Tutoriels de maquillage interactifs en temps réel avec miroir virtuel AR et coaching esthétique hors ligne.",
+    tags: ["AI", "AR", "Offline", "Maquillage"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.esthetique",
+  },
+  {
+    id: "ruqya-assistant",
+    name: "Ruqya ai ar offline assistant",
+    packageName: "com.bilgassimel.ruqya",
+    category: "spiritual",
+    categoryLabel: "Spiritualité",
+    description: "Guide spirituel et invocations authentiques de la Ruqya avec récitations audio et explications hors ligne.",
+    tags: ["AI", "AR", "Offline", "Ruqya"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ruqya",
+  },
+];
+
+export const getProductById = (id: string): Product | undefined => {
+  return products.find((product) => product.id === id);
+};
+
+export const getProductByPackage = (packageName: string): Product | undefined => {
+  return products.find((product) => product.packageName === packageName);
+};

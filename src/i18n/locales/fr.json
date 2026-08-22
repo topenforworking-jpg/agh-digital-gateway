@@ -1,10 +1,33 @@
 {
   "navigation": {
     "expertise": "Expertise",
+    "products": "Nos Produits",
     "careers": "Carrières",
     "culture": "Culture",
     "contact": "Contact",
     "joinUs": "Rejoignez-nous"
+  },
+  "products": {
+    "badge": "Notre Écosystème Mobile",
+    "title": "Nos Applications & Produits",
+    "subtitle": "Découvrez notre suite d'applications mobiles innovantes propulsées par l'Intelligence Artificielle, la Réalité Augmentée et conçues pour fonctionner 100% hors ligne.",
+    "searchPlaceholder": "Rechercher une application par nom, package ou technologie...",
+    "showingCount": "Affichage de",
+    "appsCount": "applications",
+    "offlineBadge": "100% Offline & AR Ready",
+    "noResultsTitle": "Aucune application trouvée",
+    "noResultsDesc": "Aucun produit ne correspond à votre recherche. Essayez un autre terme ou réinitialisez les filtres.",
+    "resetFilters": "Réinitialiser les filtres",
+    "categories": {
+      "all": "Toutes les Apps",
+      "health": "Santé & Fitness",
+      "beauty": "Beauté & Mode",
+      "food": "Cuisine & Recettes",
+      "spiritual": "Spiritualité",
+      "education": "Éducation & Jeux",
+      "lifestyle": "Lifestyle & Déco",
+      "business": "Business"
+    }
   },
   "hero": {
     "badge": "Recrutement : Postes 100% Remote",
