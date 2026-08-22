@@ -13,6 +13,9 @@ import {
   Palette, 
   ShoppingBag,
   Zap,
+  Gamepad2,
+  Clock,
+  ArrowRight,
   Image as ImageIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -32,6 +35,7 @@ const categoryIcons: Record<string, typeof Smartphone> = {
   education: BookOpen,
   beauty: Palette,
   business: ShoppingBag,
+  games: Gamepad2,
 };
 
 const Products = () => {
@@ -59,7 +63,8 @@ const Products = () => {
     { id: "beauty", label: t("products.categories.beauty", "Beauté & Mode") },
     { id: "food", label: t("products.categories.food", "Cuisine & Recettes") },
     { id: "spiritual", label: t("products.categories.spiritual", "Spiritualité") },
-    { id: "education", label: t("products.categories.education", "Éducation & Jeux") },
+    { id: "education", label: t("products.categories.education", "Éducation & Langues") },
+    { id: "games", label: "Jeux & Arcade" },
     { id: "lifestyle", label: t("products.categories.lifestyle", "Lifestyle & Déco") },
     { id: "business", label: t("products.categories.business", "Business") },
   ];
@@ -244,21 +249,35 @@ const Products = () => {
                     </Link>
                   </Button>
 
-                  <Button
-                    size="sm"
-                    className="w-full sm:w-auto rounded-full gap-2 group/btn text-xs font-medium"
-                    asChild
-                  >
-                    <a
-                      href={product.playStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Voir ${product.name} sur Google Play`}
+                  {product.isDraft ? (
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="w-full sm:w-auto rounded-full gap-2 text-xs font-medium opacity-80"
+                      asChild
                     >
-                      <span>Google Play</span>
-                      <ExternalLink className="h-3.5 w-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                    </a>
-                  </Button>
+                      <Link to={`/nos-produits/${product.id}`}>
+                        <span>Brouillon Play Store</span>
+                        <Clock className="h-3.5 w-3.5" />
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button
+                      size="sm"
+                      className="w-full sm:w-auto rounded-full gap-2 group/btn text-xs font-medium"
+                      asChild
+                    >
+                      <a
+                        href={product.playStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Voir ${product.name} sur Google Play`}
+                      >
+                        <span>Google Play</span>
+                        <ExternalLink className="h-3.5 w-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </Card>
             );

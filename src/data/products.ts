@@ -2,17 +2,17 @@ export interface Product {
   id: string;
   name: string;
   packageName: string;
-  category: 'health' | 'food' | 'spiritual' | 'lifestyle' | 'education' | 'beauty' | 'business';
+  category: 'health' | 'food' | 'spiritual' | 'lifestyle' | 'education' | 'beauty' | 'business' | 'games';
   categoryLabel: string;
   description: string;
   longDescription: string;
   features: string[];
   tags: string[];
   playStoreUrl: string;
-  icon: string;
-  preview: string;
-  galleryImages?: string[];
+  icon?: string;
+  preview?: string;
   featured?: boolean;
+  isDraft?: boolean;
   version?: string;
   rating?: string;
   compatibility?: string;
@@ -352,9 +352,9 @@ export const products: Product[] = [
     name: "Darija Quest",
     packageName: "com.bilgassimel.darijaquest",
     category: "education",
-    categoryLabel: "Éducation & Jeux",
+    categoryLabel: "Éducation & Langues",
     description: "Jeu éducatif interactif pour apprendre et maîtriser l'arabe dialectal (Darija) de manière ludique.",
-    longDescription: "Apprenez le Darija marocain tout en vous amusant ! Darija Quest combine des mini-jeux addictifs, des dialogues de la vie quotidienne, de la prononciation audio native et des défis culturels pour vous faire parler couramment en quelques semaines.",
+    longDescription: "Apprenez le Darija marocain tout en vous amusant ! Darija Quest combine des mini-jeux captivants, des dialogues de la vie quotidienne, de la prononciation audio native et des défis culturels pour vous faire parler couramment en quelques semaines.",
     features: [
       "Parcours d'apprentissage par niveaux (débutant à avancé)",
       "Audio haute fidélité avec locuteurs natifs marocains",
@@ -364,8 +364,6 @@ export const products: Product[] = [
     ],
     tags: ["Apprentissage", "Jeux", "Darija", "Maroc", "Culture", "Langues"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.darijaquest",
-    icon: "/apps/darija-quest/icon.png",
-    preview: "/apps/darija-quest/preview.png",
     version: "1.4.0",
     rating: "4.8",
     compatibility: "Android 8.0+",
@@ -391,6 +389,30 @@ export const products: Product[] = [
     preview: "/apps/dressing-try-on/preview.png",
     version: "1.7.0",
     rating: "4.7",
+    compatibility: "Android 8.0+",
+  },
+  {
+    id: "fun-x-rush",
+    name: "FUN X RUSH",
+    packageName: "com.bilgassimel.funxrush",
+    category: "games",
+    categoryLabel: "Jeux & Arcade",
+    description: "Jeu d'arcade dynamique et palpitant plein de défis, d'obstacles et d'action hors ligne.",
+    longDescription: "Plongez dans l'univers survitaminé de FUN X RUSH ! Évitez les pièges, collectez des bonus exclusifs et battez des records dans ce jeu d'arcade frénétique développé pour une expérience fluide et addictive sans connexion internet requise.",
+    features: [
+      "Gameplay d'arcade rapide, dynamique et addictif",
+      "Graphismes colorés et animations ultra-fluides 60 FPS",
+      "Personnages et skins déblocables au fil des parties",
+      "Tableaux des scores locaux et défis quotidiens",
+      "Totalement jouable hors ligne"
+    ],
+    tags: ["Jeux", "Arcade", "Action", "Offline", "Runner"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.funxrush",
+    icon: "/apps/fun-x-rush/icon.png",
+    preview: "/apps/fun-x-rush/preview.png",
+    isDraft: true,
+    version: "Brouillon Google Play",
+    rating: "En attente",
     compatibility: "Android 8.0+",
   },
   {

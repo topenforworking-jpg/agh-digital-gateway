@@ -17,6 +17,8 @@ import {
   ChevronRight,
   Home,
   CheckCircle2,
+  Gamepad2,
+  Clock,
   Image as ImageIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -38,6 +40,7 @@ const categoryIcons: Record<string, typeof Smartphone> = {
   education: BookOpen,
   beauty: Palette,
   business: ShoppingBag,
+  games: Gamepad2,
 };
 
 const ProductsPage = () => {
@@ -67,7 +70,8 @@ const ProductsPage = () => {
     { id: "beauty", label: "Beauté & Mode", count: products.filter(p => p.category === 'beauty').length },
     { id: "food", label: "Cuisine & Recettes", count: products.filter(p => p.category === 'food').length },
     { id: "spiritual", label: "Spiritualité", count: products.filter(p => p.category === 'spiritual').length },
-    { id: "education", label: "Éducation & Jeux", count: products.filter(p => p.category === 'education').length },
+    { id: "education", label: "Éducation & Langues", count: products.filter(p => p.category === 'education').length },
+    { id: "games", label: "Jeux & Arcade", count: products.filter(p => p.category === 'games').length },
     { id: "lifestyle", label: "Lifestyle & Déco", count: products.filter(p => p.category === 'lifestyle').length },
     { id: "business", label: "Business", count: products.filter(p => p.category === 'business').length },
   ];
@@ -76,8 +80,8 @@ const ProductsPage = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
         title="Nos Produits & Applications Mobiles - AGH Data Agency Holding SA"
-        description="Découvrez l'écosystème de 19 applications mobiles innovantes développées par AGH Data Agency : IA embarquée, Réalité Augmentée et 100% Offline."
-        keywords="applications mobiles, AI offline, réalité augmentée, flutter, store google play, AGH Data Agency, applications santé, cuisine, spiritualité"
+        description="Découvrez l'écosystème de 20 applications mobiles innovantes développées par AGH Data Agency : IA embarquée, Réalité Augmentée et 100% Offline."
+        keywords="applications mobiles, AI offline, réalité augmentée, flutter, store google play, AGH Data Agency, applications santé, cuisine, spiritualité, jeux"
         locale={locale}
       />
       
@@ -112,7 +116,7 @@ const ProductsPage = () => {
             {/* Quick stats pills */}
             <div className="flex flex-wrap justify-center gap-3 pt-4 text-sm font-medium">
               <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-card border border-border">
-                <CheckCircle2 className="h-4 w-4 text-primary" /> 19 Applications Développées
+                <CheckCircle2 className="h-4 w-4 text-primary" /> 20 Applications sur Google Play Console
               </span>
               <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-card border border-border">
                 <Zap className="h-4 w-4 text-amber-500" /> 100% Fonctionnement Hors Ligne
@@ -275,21 +279,35 @@ const ProductsPage = () => {
                       </Link>
                     </Button>
 
-                    <Button
-                      size="sm"
-                      className="w-full sm:w-auto rounded-full gap-2 text-xs font-medium"
-                      asChild
-                    >
-                      <a
-                        href={product.playStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Voir ${product.name} sur Google Play`}
+                    {product.isDraft ? (
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="w-full sm:w-auto rounded-full gap-2 text-xs font-medium opacity-80"
+                        asChild
                       >
-                        <span>Google Play</span>
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    </Button>
+                        <Link to={`/nos-produits/${product.id}`}>
+                          <span>Brouillon Play Store</span>
+                          <Clock className="h-3.5 w-3.5" />
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button
+                        size="sm"
+                        className="w-full sm:w-auto rounded-full gap-2 text-xs font-medium"
+                        asChild
+                      >
+                        <a
+                          href={product.playStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Voir ${product.name} sur Google Play`}
+                        >
+                          <span>Google Play</span>
+                          <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </Card>
               );

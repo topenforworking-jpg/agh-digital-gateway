@@ -140,20 +140,30 @@ const ProductDetailPage = () => {
 
               {/* Direct CTAs */}
               <div className="w-full md:w-auto flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 pt-4 md:pt-0">
-                <Button 
-                  size="lg" 
-                  className="rounded-full gap-2 px-8 h-12 shadow-md"
-                  asChild
-                >
-                  <a 
-                    href={product.playStoreUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                {product.isDraft ? (
+                  <Button 
+                    size="lg" 
+                    variant="secondary"
+                    className="rounded-full gap-2 px-8 h-12 shadow-sm cursor-default"
                   >
-                    <span>Voir sur Google Play</span>
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
-                </Button>
+                    <span>Brouillon Google Play (Bientôt disponible)</span>
+                  </Button>
+                ) : (
+                  <Button 
+                    size="lg" 
+                    className="rounded-full gap-2 px-8 h-12 shadow-md"
+                    asChild
+                  >
+                    <a 
+                      href={product.playStoreUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <span>Voir sur Google Play</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                )}
 
                 <Button 
                   variant="outline" 
