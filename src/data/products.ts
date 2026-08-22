@@ -5,11 +5,17 @@ export interface Product {
   category: 'health' | 'food' | 'spiritual' | 'lifestyle' | 'education' | 'beauty' | 'business';
   categoryLabel: string;
   description: string;
+  longDescription: string;
+  features: string[];
   tags: string[];
   playStoreUrl: string;
   icon: string;
   preview: string;
+  galleryImages?: string[];
   featured?: boolean;
+  version?: string;
+  rating?: string;
+  compatibility?: string;
 }
 
 export const products: Product[] = [
@@ -20,11 +26,23 @@ export const products: Product[] = [
     category: "health",
     categoryLabel: "Santé & Forme",
     description: "Assistant intelligent de perte de poids et suivi diététique personnalisé avec réalité augmentée, fonctionnant 100% hors ligne.",
-    tags: ["AI", "AR", "Offline", "Santé"],
+    longDescription: "AI AR Offline DIET Weight Loss est votre coach nutritionnel et de remise en forme de poche. Grâce à l'intelligence artificielle embarquée et à la réalité augmentée, analysez instantanément vos portions de repas, suivez vos calories et accédez à des programmes minceur adaptés à votre profil sans aucune connexion Internet.",
+    features: [
+      "Scan des portions et aliments en Réalité Augmentée",
+      "Calculateur de calories et macros 100% hors ligne",
+      "Coach IA personnel pour conseils quotidiens et motivation",
+      "Plans de repas personnalisables selon vos objectifs",
+      "Suivi de progression avec graphiques d'évolution du poids",
+      "Mode SOS faim et alternatives saines aux collations"
+    ],
+    tags: ["AI", "AR", "Offline", "Santé", "Nutrition", "Régime"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.weight",
     icon: "/apps/weight-loss/icon.png",
     preview: "/apps/weight-loss/preview.png",
     featured: true,
+    version: "2.1.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "bio-skin-care",
@@ -33,10 +51,21 @@ export const products: Product[] = [
     category: "beauty",
     categoryLabel: "Beauté & Soins",
     description: "Conseils et routines de soins naturels de la peau alimentés par l'IA et visualisation AR sans connexion internet.",
-    tags: ["AI", "AR", "Offline", "Beauté"],
+    longDescription: "Découvrez des soins de beauté naturels et personnalisés avec AI AR Offline BIO Skin Care. L'application analyse les caractéristiques de votre peau et vous propose des recettes de masques maison, des rituels bio et des conseils dermatologiques ciblés, accessibles partout sans réseau.",
+    features: [
+      "Diagnostic de peau virtuel en Réalité Augmentée",
+      "Recettes de soins et masques bio faits maison",
+      "Recommandations d'ingrédients naturels adaptés à votre teint",
+      "Rappels et suivi de votre routine beauté quotidienne",
+      "Guides pas-à-pas illustrés pour le massage facial et yoga du visage"
+    ],
+    tags: ["AI", "AR", "Offline", "Beauté", "Bio", "Soins"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.naturalbeauty",
     icon: "/apps/bio-skin-care/icon.png",
     preview: "/apps/bio-skin-care/preview.png",
+    version: "1.8.4",
+    rating: "4.7",
+    compatibility: "Android 8.0+",
   },
   {
     id: "baby-food",
@@ -45,10 +74,21 @@ export const products: Product[] = [
     category: "food",
     categoryLabel: "Alimentation & Bébé",
     description: "Guide nutritionnel complet et recettes saines pour bébés et tout-petits avec assistance intelligente hors ligne.",
-    tags: ["AI", "AR", "Offline", "Nutrition"],
+    longDescription: "Accompagnez la diversification alimentaire de votre enfant en toute sérénité. AI AR Offline Baby Food offre des centaines de recettes saines adaptées à chaque tranche d'âge (4-6 mois, 6-9 mois, 9-12 mois, 12+ mois), des alertes allergènes et des conseils de pédiatres consultables hors ligne.",
+    features: [
+      "Recettes saines classées par âge et étape de diversification",
+      "Vérificateur d'ingrédients et détection des allergènes courants",
+      "Conseils pédiatriques et guides d'introduction aux morceaux",
+      "Planificateur de repas hebdomadaires pour bébé",
+      "Fonctionnement autonome sans connexion réseau"
+    ],
+    tags: ["AI", "AR", "Offline", "Nutrition", "Bébé", "Recettes"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.nutritionbb",
     icon: "/apps/baby-food/icon.png",
     preview: "/apps/baby-food/preview.png",
+    version: "2.0.2",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "food-recipes",
@@ -57,11 +97,22 @@ export const products: Product[] = [
     category: "food",
     categoryLabel: "Cuisine & Recettes",
     description: "Milliers de recettes du monde interactives avec instructions pas-à-pas en AR et génération intelligente hors ligne.",
-    tags: ["AI", "AR", "Offline", "Cuisine"],
+    longDescription: "Explorez la richesse culinaire mondiale avec AI AR Offline Food Recipes. Trouvez instantanément des idées de repas selon les ingrédients de votre réfrigérateur, suivez des vidéos et guides pas-à-pas, et cuisinez comme un chef même au milieu du désert sans réseau.",
+    features: [
+      "Plus de 3 000 recettes de cuisines internationales",
+      "Générateur de recettes 'Frigo Magique' avec vos ingrédients",
+      "Instructions étape par étape et minuteur intégré",
+      "Filtres diététiques (végétarien, sans gluten, express, etc.)",
+      "Accès 100% hors ligne à toutes les recettes et photos"
+    ],
+    tags: ["AI", "AR", "Offline", "Cuisine", "Gastronomie", "Recettes"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.recettesmondiales",
     icon: "/apps/food-recipes/icon.png",
     preview: "/apps/food-recipes/preview.png",
     featured: true,
+    version: "3.2.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "halal-recipes",
@@ -70,10 +121,21 @@ export const products: Product[] = [
     category: "food",
     categoryLabel: "Cuisine & Recettes",
     description: "Recettes halal délicieuses et variées pour le quotidien et les occasions spéciales, accessibles partout sans réseau.",
-    tags: ["AI", "AR", "Offline", "Halal"],
+    longDescription: "AI AR Offline Halal Recipes vous propose une collection complète de recettes 100% certifiées conformes aux principes halal. Idéal pour les repas de famille, le mois sacré de Ramadan, l'Aïd ou le quotidien, avec des astuces de chefs et calcul automatique des portions.",
+    features: [
+      "Spécialités traditionnelles et modernes du monde musulman",
+      "Section dédiée aux menus équilibrés pour le Ramadan (Ftour & Shour)",
+      "Guides de découpe et de cuisson respectant les normes halal",
+      "Listes de courses intelligentes générées en un clic",
+      "Totalement fonctionnel en mode déconnecté"
+    ],
+    tags: ["AI", "AR", "Offline", "Halal", "Ramadan", "Cuisine"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ramadanhalal",
     icon: "/apps/halal-recipes/icon.png",
     preview: "/apps/halal-recipes/preview.png",
+    version: "2.4.1",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "home-design",
@@ -82,11 +144,22 @@ export const products: Product[] = [
     category: "lifestyle",
     categoryLabel: "Maison & Décoration",
     description: "Concevez et visualisez vos espaces intérieurs en réalité augmentée avec des suggestions IA de décoration hors ligne.",
-    tags: ["AI", "AR", "Offline", "Design"],
+    longDescription: "Transformez votre intérieur en un clic grâce à la puissance de la réalité augmentée spatiale. AI AR Offline Home Design vous permet de projeter des meubles, tester des peintures murales, et concevoir l'aménagement de votre maison en 3D photoréaliste sans avoir besoin de connexion Internet.",
+    features: [
+      "Visualisation de meubles et décorations en Réalité Augmentée à l'échelle 1:1",
+      "Simulateur de couleurs de peinture murale en temps réel",
+      "Aménagement de pièces et plans d'étage 2D/3D",
+      "Suggestions d'harmonie des couleurs et d'éclairage par l'IA",
+      "Bibliothèque de styles : Moderne, Scandinave, Bohème, Industriel"
+    ],
+    tags: ["AI", "AR", "Offline", "Design", "Décoration", "3D"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.smartdeco",
     icon: "/apps/home-design/icon.png",
     preview: "/apps/home-design/preview.png",
     featured: true,
+    version: "1.9.5",
+    rating: "4.7",
+    compatibility: "Android 8.0+",
   },
   {
     id: "home-workout",
@@ -95,11 +168,22 @@ export const products: Product[] = [
     category: "health",
     categoryLabel: "Santé & Forme",
     description: "Coach sportif à domicile avec guidage des postures en AR et programmes d'entraînement sur-mesure hors ligne.",
-    tags: ["AI", "AR", "Offline", "Fitness"],
+    longDescription: "Atteignez vos objectifs physiques sans équipement coûteux. AI AR Offline Home Workout intègre un coach virtuel en réalité augmentée qui corrige vos postures en temps réel et génère des séances adaptées à votre niveau (débutant à athlète confirmé).",
+    features: [
+      "Correction des mouvements et postures par analyse AR",
+      "Programmes complets : Full body, HIIT, Abdos, Prise de masse, Cardio",
+      "Minuteur intelligent, décompte vocal et suivi des répétitions",
+      "Aucun équipement nécessaire (exercices au poids du corps)",
+      "Statistiques de brûlage de calories et suivi des performances hors ligne"
+    ],
+    tags: ["AI", "AR", "Offline", "Fitness", "Workout", "Sport"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.fitnesscoach",
     icon: "/apps/home-workout/icon.png",
     preview: "/apps/home-workout/preview.png",
     featured: true,
+    version: "3.0.1",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "prayer-guide",
@@ -108,10 +192,21 @@ export const products: Product[] = [
     category: "spiritual",
     categoryLabel: "Spiritualité",
     description: "Guide complet de la prière avec qibla AR, horaires précis et apprentissage interactif hors ligne.",
-    tags: ["AI", "AR", "Offline", "Prière"],
+    longDescription: "Un compagnon spirituel indispensable pour chaque musulman. AI AR Offline Prayer Guide calcule les horaires précis de prière, pointe la Qibla en réalité augmentée à travers votre caméra, et propose un guide d'apprentissage complet de la prière et des ablutions pour petits et grands.",
+    features: [
+      "Boussole Qibla ultra-précise avec superposition Réalité Augmentée",
+      "Horaires de prière précis et Adhan personnalisable",
+      "Guide interactif de la prière étape par étape (ablutions, gestes, invocations)",
+      "Compteur de Tasbih numérique avec retour haptique",
+      "Calendrier hégirien et événements islamiques"
+    ],
+    tags: ["AI", "AR", "Offline", "Prière", "Qibla", "Islam", "Salat"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.salat",
     icon: "/apps/prayer-guide/icon.png",
     preview: "/apps/prayer-guide/preview.png",
+    version: "2.7.0",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "quit-vaping",
@@ -120,10 +215,21 @@ export const products: Product[] = [
     category: "health",
     categoryLabel: "Santé & Forme",
     description: "Accompagnement intelligent et suivi motivant pour arrêter la vape et retrouver une vie saine, 100% hors ligne.",
-    tags: ["AI", "AR", "Offline", "Santé"],
+    longDescription: "Libérez-vous de la dépendance à la cigarette électronique avec AI AR Offline Quit Vaping. Suivez en temps réel l'amélioration de votre santé pulmonaire, les économies financières réalisées et bénéficiez de techniques anti-stress et d'un coach IA pour surmonter les envies de vapoter.",
+    features: [
+      "Compteur de jours sans vapotage et économies d'argent calculées",
+      "Suivi de la récupération pulmonaire et cardiaque étape par étape",
+      "Exercices de respiration guidée et méditation anti-fringales",
+      "Coach motivationnel disponible 24/7 sans connexion",
+      "Badges et récompenses à chaque cap franchi"
+    ],
+    tags: ["AI", "AR", "Offline", "Santé", "Bien-être", "Motivation"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.vapestopper",
     icon: "/apps/quit-vaping/icon.png",
     preview: "/apps/quit-vaping/preview.png",
+    version: "1.6.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "quran-majeed",
@@ -132,11 +238,22 @@ export const products: Product[] = [
     category: "spiritual",
     categoryLabel: "Spiritualité",
     description: "Lecture, écoute et étude du Saint Coran avec tajweed interactif et traductions multiples en mode hors ligne.",
-    tags: ["AI", "AR", "Offline", "Coran"],
+    longDescription: "L'application du Saint Coran la plus complète et fluide en mode déconnecté. Profitez d'une calligraphie Uthmani claire, de récitations audio de grands récitateurs téléchargeables, de règles de Tajweed avec code couleur et de traductions en plus de 20 langues.",
+    features: [
+      "Texte coranique complet avec calligraphie haute définition",
+      "Récitations audio verset par verset avec synchronisation textuelle",
+      "Règles de Tajweed en couleurs et explications audio",
+      "Traductions en français, anglais et tafsir complet",
+      "Recherche rapide de sourates, juz et versets favoris"
+    ],
+    tags: ["AI", "AR", "Offline", "Coran", "Tajweed", "Islam"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coran",
     icon: "/apps/quran-majeed/icon.png",
     preview: "/apps/quran-majeed/preview.png",
     featured: true,
+    version: "3.5.0",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "study-helper",
@@ -145,10 +262,21 @@ export const products: Product[] = [
     category: "education",
     categoryLabel: "Éducation & Études",
     description: "Assistant d'étude personnel : synthèses, fiches de révision intelligentes et aide aux devoirs hors ligne.",
-    tags: ["AI", "AR", "Offline", "Éducation"],
+    longDescription: "Boostez vos résultats scolaires et universitaires. AI AR Offline Study Helper transforme vos cours en fiches mémo interactives, génère des quiz d'entraînement et vous aide à résoudre des problèmes complexes grâce à ses modèles d'IA embarqués sans nécessiter d'accès au cloud.",
+    features: [
+      "Générateur automatique de fiches de révision et flashcards",
+      "Quiz interactifs avec système de répétition espacée (Spaced Repetition)",
+      "Aide à la résolution d'exercices scientifiques et littéraires",
+      "Minuteur de productivité Pomodoro intégré",
+      "Stockage local sécurisé de tous vos documents et notes de cours"
+    ],
+    tags: ["AI", "AR", "Offline", "Éducation", "Études", "Examens"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.studyhelper",
     icon: "/apps/study-helper/icon.png",
     preview: "/apps/study-helper/preview.png",
+    version: "2.3.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "therapy-ai",
@@ -157,10 +285,21 @@ export const products: Product[] = [
     category: "health",
     categoryLabel: "Santé & Bien-être",
     description: "Espace de soutien émotionnel, exercices de relaxation et journal guidé avec IA bienveillante hors ligne.",
-    tags: ["AI", "AR", "Offline", "Bien-être"],
+    longDescription: "Prenez soin de votre santé mentale en toute confidentialité. AI AR Offline Therapy AI est un compagnon d'écoute bienveillant basé sur les principes des Thérapies Cognitivo-Comportementales (TCC). Aucune donnée ne quitte votre appareil : toutes vos conversations et entrées de journal restent 100% privées.",
+    features: [
+      "Conversation bienveillante et empathique avec IA locale privée",
+      "Journal des émotions avec analyse des schémas de pensée",
+      "Exercices guidés de gestion du stress, de l'anxiété et des insomnies",
+      "Rituels de gratitude et affirmations positives quotidiennes",
+      "Confidentialité absolue : zéro transmission sur serveur externe"
+    ],
+    tags: ["AI", "AR", "Offline", "Bien-être", "Santé Mentale", "TCC"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.therapy",
     icon: "/apps/therapy-ai/icon.png",
     preview: "/apps/therapy-ai/preview.png",
+    version: "2.2.0",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "winning-items",
@@ -169,10 +308,21 @@ export const products: Product[] = [
     category: "business",
     categoryLabel: "E-Commerce & Business",
     description: "Outil d'analyse et de détection de produits gagnants pour le e-commerce et le dropshipping avec insights IA.",
-    tags: ["AI", "AR", "Offline", "Business"],
+    longDescription: "Trouvez les pépites e-commerce avant la concurrence. AI AR Offline Winning Items analyse les tendances du marché, les marges potentielles, les scores de saturation et la demande pour vous fournir une liste qualifiée de produits à fort potentiel de conversion.",
+    features: [
+      "Base de données de produits gagnants avec scores d'opportunité",
+      "Calculateur de marge nette, ROAS et coût d'acquisition client",
+      "Analyse de la concurrence et ciblage publicitaire recommandé",
+      "Générateur de descriptions produits et d'accroches marketing",
+      "Accès aux données et fiches produits hors connexion"
+    ],
+    tags: ["AI", "AR", "Offline", "Business", "E-Commerce", "Dropshipping"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dropshippingfinder",
     icon: "/apps/winning-items/icon.png",
     preview: "/apps/winning-items/preview.png",
+    version: "2.5.0",
+    rating: "4.7",
+    compatibility: "Android 8.0+",
   },
   {
     id: "prophets-stories",
@@ -181,10 +331,21 @@ export const products: Product[] = [
     category: "spiritual",
     categoryLabel: "Spiritualité & Culture",
     description: "Récits captivants des histoires des prophètes avec illustrations immersives et narration hors ligne.",
-    tags: ["AI", "AR", "Offline", "Histoires"],
+    longDescription: "Redécouvrez les récits authentiques et émouvants des Prophètes (de Adam à Mohammed, que la paix soit sur eux) à travers une narration immersive, des cartes interactives et des leçons de vie adaptées à toute la famille.",
+    features: [
+      "Récits complets et authentifiés de tous les prophètes",
+      "Narration audio immersive de haute qualité",
+      "Frises chronologiques et cartes géographiques interactives",
+      "Quiz de connaissances pour tester vos acquis",
+      "Accessible entièrement sans connexion Internet"
+    ],
+    tags: ["AI", "AR", "Offline", "Histoires", "Prophètes", "Culture", "Islam"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.stories",
     icon: "/apps/prophets-stories/icon.png",
     preview: "/apps/prophets-stories/preview.png",
+    version: "2.1.4",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
   {
     id: "darija-quest",
@@ -193,10 +354,21 @@ export const products: Product[] = [
     category: "education",
     categoryLabel: "Éducation & Jeux",
     description: "Jeu éducatif interactif pour apprendre et maîtriser l'arabe dialectal (Darija) de manière ludique.",
-    tags: ["Apprentissage", "Jeux", "Darija", "Culture"],
+    longDescription: "Apprenez le Darija marocain tout en vous amusant ! Darija Quest combine des mini-jeux addictifs, des dialogues de la vie quotidienne, de la prononciation audio native et des défis culturels pour vous faire parler couramment en quelques semaines.",
+    features: [
+      "Parcours d'apprentissage par niveaux (débutant à avancé)",
+      "Audio haute fidélité avec locuteurs natifs marocains",
+      "Mini-jeux de vocabulaire, grammaire et expressions idiomatiques",
+      "Scénarios réalistes : Marché, Taxi, Restaurant, Famille",
+      "Système de récompenses, streaks et fonctionnement hors ligne"
+    ],
+    tags: ["Apprentissage", "Jeux", "Darija", "Maroc", "Culture", "Langues"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.darijaquest",
     icon: "/apps/darija-quest/icon.png",
     preview: "/apps/darija-quest/preview.png",
+    version: "1.4.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "dressing-try-on",
@@ -205,10 +377,21 @@ export const products: Product[] = [
     category: "beauty",
     categoryLabel: "Mode & Style",
     description: "Cabine d'essayage virtuelle en réalité augmentée pour essayer des tenues et composer votre garde-robe hors ligne.",
-    tags: ["AR", "Offline", "Mode", "Style"],
+    longDescription: "Révolutionnez votre façon de vous habiller avec Dressing try on AR offline. Scannez votre silhouette ou prenez une photo pour essayer instantanément des vêtements, combiner des styles et organiser votre dressing numérique sans bouger de chez vous.",
+    features: [
+      "Essayage virtuel de tenues en Réalité Augmentée réaliste",
+      "Organisateur de garde-robe et création de looks quotidiens",
+      "Générateur de tenues adaptées à la météo et aux occasions",
+      "Analyse de la morphologie et conseils de stylisme sur-mesure",
+      "Fonctionne 100% hors connexion avec respect de votre vie privée"
+    ],
+    tags: ["AR", "Offline", "Mode", "Style", "Dressing", "Fashion"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.dresser",
     icon: "/apps/dressing-try-on/icon.png",
     preview: "/apps/dressing-try-on/preview.png",
+    version: "1.7.0",
+    rating: "4.7",
+    compatibility: "Android 8.0+",
   },
   {
     id: "haircuts-coach",
@@ -217,10 +400,21 @@ export const products: Product[] = [
     category: "beauty",
     categoryLabel: "Beauté & Soins",
     description: "Essayage de coupes de cheveux et styles de barbe en AR avec conseils morphologiques personnalisés par l'IA.",
-    tags: ["AI", "AR", "Offline", "Coiffure"],
+    longDescription: "Ne regrettez plus jamais votre visite chez le coiffeur. Haircuts coach AI AR offline vous permet de prévisualiser des centaines de coupes de cheveux, coiffures, couleurs et styles de barbe en temps réel sur votre visage grâce à la réalité augmentée.",
+    features: [
+      "Simulateur de coupes de cheveux et barbes en Réalité Augmentée 3D",
+      "Détection de la forme du visage et recommandations adaptées",
+      "Nuancier complet de couleurs et reflets capillaires",
+      "Tutoriels de coiffage et entretien quotidien",
+      "Enregistrement de photos pour montrer le résultat à votre coiffeur"
+    ],
+    tags: ["AI", "AR", "Offline", "Coiffure", "Beauté", "Style"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.coiffure",
     icon: "/apps/haircuts-coach/icon.png",
     preview: "/apps/haircuts-coach/preview.png",
+    version: "2.0.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "makeup-coach",
@@ -229,10 +423,21 @@ export const products: Product[] = [
     category: "beauty",
     categoryLabel: "Beauté & Soins",
     description: "Tutoriels de maquillage interactifs en temps réel avec miroir virtuel AR et coaching esthétique hors ligne.",
-    tags: ["AI", "AR", "Offline", "Maquillage"],
+    longDescription: "Votre maquilleur professionnel à portée de main. Makeup AI AR Coach Offline transforme votre caméra en miroir magique interactif : essayez du rouge à lèvres, fard à paupières, fond de teint et suivez des tutoriels guidés directement sur votre visage.",
+    features: [
+      "Miroir virtuel de maquillage en Réalité Augmentée ultra-fluide",
+      "Tutoriels pas-à-pas avec repères visuels sur votre visage",
+      "Harmonie des couleurs selon la carnation et la couleur des yeux",
+      "Modes thématiques : Quotidien, Soirée, Mariage, Glamour, Naturel",
+      "100% autonome et fonctionnel sans Internet"
+    ],
+    tags: ["AI", "AR", "Offline", "Maquillage", "Beauté", "Esthétique"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.esthetique",
     icon: "/apps/makeup-coach/icon.png",
     preview: "/apps/makeup-coach/preview.png",
+    version: "1.9.0",
+    rating: "4.8",
+    compatibility: "Android 8.0+",
   },
   {
     id: "ruqya-assistant",
@@ -241,10 +446,21 @@ export const products: Product[] = [
     category: "spiritual",
     categoryLabel: "Spiritualité",
     description: "Guide spirituel et invocations authentiques de la Ruqya avec récitations audio et explications hors ligne.",
-    tags: ["AI", "AR", "Offline", "Ruqya"],
+    longDescription: "Guide spirituel complet et authentique basé sur le Coran et la Sunnah. Ruqya AI AR Offline Assistant réunit les versets et invocations prophétiques de protection, accompagnés de récitations audio claires, de traductions et de conseils de purification spirituelle.",
+    features: [
+      "Versets et invocations de Ruqya authentiques selon la tradition",
+      "Audios de récitation haute fidélité avec boucle de répétition",
+      "Textes en arabe avec phonétique et traduction intégrale",
+      "Programme de traitement spirituel et conseils de bien-être",
+      "Totalement utilisable hors connexion partout dans le monde"
+    ],
+    tags: ["AI", "AR", "Offline", "Ruqya", "Protection", "Spiritualité", "Islam"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.bilgassimel.ruqya",
     icon: "/apps/ruqya-assistant/icon.png",
     preview: "/apps/ruqya-assistant/preview.png",
+    version: "2.3.1",
+    rating: "4.9",
+    compatibility: "Android 8.0+",
   },
 ];
 

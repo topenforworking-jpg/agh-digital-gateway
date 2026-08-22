@@ -39,20 +39,20 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#products"
+                <Link
+                  to="/nos-produits"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Products
-                </a>
+                  Nos Produits (19 Apps)
+                </Link>
               </li>
               <li>
-                <a
-                  href="#careers"
+                <Link
+                  to="/carriere"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Careers
-                </a>
+                  Carrières (14 Postes)
+                </Link>
               </li>
               <li>
                 <a

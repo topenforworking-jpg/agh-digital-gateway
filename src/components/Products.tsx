@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { 
   Search, 
@@ -230,14 +231,22 @@ const Products = () => {
                   </CardContent>
                 </div>
 
-                <div className="p-6 pt-3 border-t border-border/50 mt-4 flex items-center justify-between">
-                  <Badge variant="outline" className="text-xs text-muted-foreground">
-                    {product.categoryLabel}
-                  </Badge>
+                <div className="p-6 pt-3 border-t border-border/50 mt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full sm:w-auto rounded-full text-xs font-medium"
+                    asChild
+                  >
+                    <Link to={`/nos-produits/${product.id}`}>
+                      Fiche complète
+                      <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                    </Link>
+                  </Button>
 
                   <Button
                     size="sm"
-                    className="rounded-full gap-2 group/btn"
+                    className="w-full sm:w-auto rounded-full gap-2 group/btn text-xs font-medium"
                     asChild
                   >
                     <a
@@ -254,6 +263,20 @@ const Products = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Global Page CTA */}
+        <div className="mt-16 text-center">
+          <Button 
+            size="lg" 
+            className="rounded-full px-8 h-12 gap-2 text-base shadow-lg hover:shadow-xl transition-all"
+            asChild
+          >
+            <Link to="/nos-produits">
+              <span>Voir la page complète de nos 19 applications</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </Button>
         </div>
 
         {/* Empty state */}

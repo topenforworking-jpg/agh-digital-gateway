@@ -160,20 +160,31 @@ const Recruitment = () => {
         )}
 
         {/* CTA */}
-        <div className="max-w-3xl mx-auto mt-16 text-center">
-          <p className="text-muted-foreground mb-4">
+        <div className="max-w-3xl mx-auto mt-16 text-center space-y-4">
+          <p className="text-muted-foreground">
             {t('recruitment.cta.text')}
           </p>
-          <Button
-            variant="outline"
-            onClick={() => {
-              const element = document.querySelector("#contact");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="rounded-full"
-          >
-            {t('recruitment.cta.button')}
-          </Button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              onClick={() => navigate("/carriere")}
+              className="rounded-full px-8 gap-2"
+            >
+              <span>Voir la page Carrières dédiée (14 postes)</span>
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => {
+                const element = document.querySelector("#contact");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="rounded-full"
+            >
+              {t('recruitment.cta.button')}
+            </Button>
+          </div>
         </div>
       </div>
     </section>
