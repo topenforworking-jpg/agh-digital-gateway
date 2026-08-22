@@ -1,110 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Pages principales -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Page d'accueil -->
   <url>
     <loc>https://agh-data-agency-holding.netlify.app/</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agh-data-agency-holding.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agh-data-agency-holding.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://agh-data-agency-holding.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agh-data-agency-holding.netlify.app/"/>
+  </url>
+
+  <!-- Catalogue Nos Produits -->
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agh-data-agency-holding.netlify.app/nos-produits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agh-data-agency-holding.netlify.app/nos-produits"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://agh-data-agency-holding.netlify.app/nos-produits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agh-data-agency-holding.netlify.app/nos-produits"/>
+  </url>
+
+  <!-- Page Carrières -->
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/carriere</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://agh-data-agency-holding.netlify.app/carriere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agh-data-agency-holding.netlify.app/carriere"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://agh-data-agency-holding.netlify.app/carriere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agh-data-agency-holding.netlify.app/carriere"/>
+  </url>
+
+  <!-- Fiches Dédiées des 20 Applications Mobiles -->
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/weight-loss</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/bio-skin-care</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/baby-food</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/food-recipes</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/halal-recipes</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/home-design</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/home-workout</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/prayer-guide</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/quit-vaping</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/quran-majeed</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/study-helper</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/therapy-ai</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/winning-items</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/prophets-stories</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/darija-quest</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/dressing-try-on</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/fun-x-rush</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/haircuts-coach</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/makeup-coach</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/nos-produits/ruqya-assistant</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Offres de stage et emplois (14 postes) -->
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/1</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/2</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/3</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/4</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/5</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/6</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/7</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/8</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/9</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/10</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/11</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/12</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/13</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agh-data-agency-holding.netlify.app/jobs/14</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Pages Légales -->
+  <url>
     <loc>https://agh-data-agency-holding.netlify.app/terms-and-conditions</loc>
-    <lastmod>2025-01-14</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://agh-data-agency-holding.netlify.app/privacy-policy</loc>
-    <lastmod>2025-01-14</lastmod>
+    <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
-  
-  <!-- Offres de stage -->
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/1</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/2</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/3</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/4</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/5</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/6</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/7</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/8</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Offres d'emploi CDI -->
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/9</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/10</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/11</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/12</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/13</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://agh-data-agency-holding.netlify.app/jobs/14</loc>
-    <lastmod>2025-01-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
 </urlset>

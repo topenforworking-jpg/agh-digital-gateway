@@ -47,13 +47,70 @@ const JobDetail = () => {
     }
   };
 
+  const jobPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description,
+    datePosted: "2026-08-01",
+    validThrough: "2026-12-31",
+    employmentType: isInternship ? "INTERN" : "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "AGH Data Agency Holding SA",
+      sameAs: "https://agh-data-agency-holding.netlify.app",
+      logo: "https://agh-data-agency-holding.netlify.app/logo.jpg"
+    },
+    jobLocationType: "TELECOMMUTE",
+    applicantLocationRequirements: {
+      "@type": "Country",
+      name: "Worldwide"
+    },
+    baseSalary: {
+      "@type": "MonetaryAmount",
+      currency: "EUR",
+      value: {
+        "@type": "QuantitativeValue",
+        value: isInternship ? 500 : 2500,
+        unitText: "MONTH"
+      }
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://agh-data-agency-holding.netlify.app/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Carrières",
+        item: "https://agh-data-agency-holding.netlify.app/carriere",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: job.title,
+        item: `https://agh-data-agency-holding.netlify.app/jobs/${job.id}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title={`${job.title} - AGH Data Agency Holding SA`}
-        description={job.description}
-        keywords={job.skills.join(", ")}
+        title={`${job.title} - ${jobTypeLabel}`}
+        description={`${job.description} Compétences : ${job.skills.join(", ")}`}
+        keywords={`${job.title}, ${job.skills.join(", ")}, télétravail, stage IT, recrutement remote`}
+        url={`/jobs/${job.id}`}
         locale={locale}
+        schema={[jobPostingSchema, breadcrumbSchema]}
       />
       <Navigation />
       

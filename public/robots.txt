@@ -1,6 +1,9 @@
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
@@ -10,10 +13,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap Index
 Sitemap: https://agh-data-agency-holding.netlify.app/sitemap.xml
 
 # Host

@@ -76,13 +76,48 @@ const ProductsPage = () => {
     { id: "business", label: "Business", count: products.filter(p => p.category === 'business').length },
   ];
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Catalogue des Applications Mobiles AGH Data Agency Holding SA",
+    description: "20 applications mobiles développées avec IA embarquée, Réalité Augmentée et mode 100% hors ligne.",
+    itemListElement: products.map((prod, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: prod.name,
+      url: `https://agh-data-agency-holding.netlify.app/nos-produits/${prod.id}`,
+      description: prod.description,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://agh-data-agency-holding.netlify.app/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Nos Produits",
+        item: "https://agh-data-agency-holding.netlify.app/nos-produits",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="Nos Produits & Applications Mobiles - AGH Data Agency Holding SA"
+        title="Nos Produits & Applications Mobiles"
         description="Découvrez l'écosystème de 20 applications mobiles innovantes développées par AGH Data Agency : IA embarquée, Réalité Augmentée et 100% Offline."
-        keywords="applications mobiles, AI offline, réalité augmentée, flutter, store google play, AGH Data Agency, applications santé, cuisine, spiritualité, jeux"
+        keywords="applications mobiles, AI offline, réalité augmentée, flutter, store google play, AGH Data Agency, applications santé, cuisine, spiritualité, jeux, Darija Quest, Fun X Rush"
+        url="/nos-produits"
         locale={locale}
+        schema={[itemListSchema, breadcrumbSchema]}
       />
       
       <Navigation />

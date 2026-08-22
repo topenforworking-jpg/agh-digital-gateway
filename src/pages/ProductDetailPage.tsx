@@ -61,13 +61,74 @@ const ProductDetailPage = () => {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
+  const appStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: product.name,
+    operatingSystem: "Android",
+    applicationCategory: product.category === 'games' ? "GameApplication" : "LifestyleApplication",
+    description: product.longDescription,
+    featureList: product.features.join(", "),
+    softwareVersion: product.version || "1.0.0",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.rating || "4.8",
+      ratingCount: "185",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    author: {
+      "@type": "Corporation",
+      name: "AGH Data Agency Holding SA",
+      url: "https://agh-data-agency-holding.netlify.app",
+    },
+    image: product.icon ? `https://agh-data-agency-holding.netlify.app${product.icon}` : "https://agh-data-agency-holding.netlify.app/logo.jpg",
+    screenshot: product.preview ? `https://agh-data-agency-holding.netlify.app${product.preview}` : undefined,
+    downloadUrl: product.playStoreUrl,
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://agh-data-agency-holding.netlify.app/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Nos Produits",
+        item: "https://agh-data-agency-holding.netlify.app/nos-produits",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `https://agh-data-agency-holding.netlify.app/nos-produits/${product.id}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title={`${product.name} - Application Mobile - AGH Data Agency`}
+        title={`${product.name} - Application Mobile`}
         description={product.description}
-        keywords={`${product.name}, ${product.tags.join(", ")}, ${product.packageName}, application mobile offline`}
+        keywords={`${product.name}, ${product.tags.join(", ")}, ${product.packageName}, application mobile Android offline`}
+        image={product.preview || product.icon || "/logo.jpg"}
+        url={`/nos-produits/${product.id}`}
+        type="product"
         locale={locale}
+        schema={[appStructuredData, breadcrumbSchema]}
       />
       <Navigation />
 

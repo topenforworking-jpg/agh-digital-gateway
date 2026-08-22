@@ -75,13 +75,64 @@ const CareersPage = () => {
     }
   ];
 
+  const jobPostingsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Offres d'emploi et Stages - AGH Data Agency Holding SA",
+    description: "14 offres d'emploi en télétravail (Remote) en développement Flutter, Django, IA, Cybersécurité, Blockchain et Marketing.",
+    itemListElement: positions.map((job, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "JobPosting",
+        title: job.title,
+        description: `${job.description}. Compétences requises : ${job.skills.join(", ")}`,
+        datePosted: "2026-08-01",
+        validThrough: "2026-12-31",
+        employmentType: job.type === "Stage (3 mois)" ? "INTERN" : "FULL_TIME",
+        hiringOrganization: {
+          "@type": "Organization",
+          name: "AGH Data Agency Holding SA",
+          sameAs: "https://agh-data-agency-holding.netlify.app",
+          logo: "https://agh-data-agency-holding.netlify.app/logo.jpg"
+        },
+        jobLocationType: "TELECOMMUTE",
+        applicantLocationRequirements: {
+          "@type": "Country",
+          name: "Worldwide"
+        }
+      }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Accueil",
+        item: "https://agh-data-agency-holding.netlify.app/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Carrières",
+        item: "https://agh-data-agency-holding.netlify.app/carriere",
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="Carrières & Recrutement - AGH Data Agency Holding SA"
+        title="Carrières & Recrutement"
         description="Rejoignez notre équipe 100% remote. Découvrez nos 14 offres d'emploi et stages de pré-embauche en développement mobile Flutter, IA, Backend Django, Cybersécurité et Marketing."
-        keywords="recrutement remote, offres d'emploi flutter, stage développement web, télétravail IT, AGH Data Agency, carrières tech"
+        keywords="recrutement remote, offres d'emploi flutter, stage développement web, télétravail IT, AGH Data Agency, carrières tech, stages pré-embauche"
+        url="/carriere"
         locale={locale}
+        schema={[jobPostingsSchema, breadcrumbSchema]}
       />
       <Navigation />
 
